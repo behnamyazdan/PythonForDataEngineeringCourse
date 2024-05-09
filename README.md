@@ -12,7 +12,11 @@
   - [for Loop](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/04-03-ControlFlow(for%20loop).md)
   - [while Loop](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/04-04-ControlFlow(while%20loop).md)
   - [Control flow examples](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/04-06-ControlFlow(examples).md)
-- [Data structures (lists, tuples, dictionaries, sets)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/05-01-DataStructure.md)
+- [Data structures (lists, tuples, dictionaries, sets)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/05-01-DataStructure(intro).md)
+  - [Lists](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/05-02-DataStructure(list).md)
+  - Tuples
+  - Dictionaries
+  - Sets
 - String manipulation
 - Functions and modules
 - Error handling (try-except blocks)
