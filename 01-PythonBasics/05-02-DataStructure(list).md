@@ -13,11 +13,17 @@ Lists in Python are versatile data structures that store collections of elements
       ```
   - **Using the `list()` Constructor:**
     You can use the `list()` constructor to create a list from another iterable object like a tuple, string, or range.
+    
     ```python
     my_tuple = (1, 2, 3)
     converted_list = list(my_tuple)
     ```
-
+    
+    ```python
+    empty_list = list()
+    print(empty_list)
+    ```
+  
   Lists can contain elements of different data types, including integers, strings, or even other lists.
 - In the example:
   - `my_list` contains integers `[1, 2, 3, 4, 5]`.
