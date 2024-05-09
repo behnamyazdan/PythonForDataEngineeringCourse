@@ -1,6 +1,5 @@
 ### Python for Data Engineering Course
 
----
 ## 01: Python Basics
 **Python Fundamentals**
 - [Introduction](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/00-Introductoin.md)
@@ -23,7 +22,6 @@
 
 **Assignment:** Ass1
 
---------
 ## 02: Data Manipulation and Analysis
 **Data Manipulation with Pandas**
 - Introduction to Pandas and its data structures (Series, DataFrame)
@@ -42,7 +40,6 @@
 
 **Assignment:** Ass2
 
-----------
 ## 03: Data Visualization
 **Data Visualization with Matplotlib and Seaborn**
 - Data visualization basics
@@ -52,7 +49,6 @@
 
 **Assignment:** Ass3
 
-----------
 ## 04: Web Scraping & APIs
 **Web Crawling with Requests, BeautifulSoup and Selenium**
 - Introduction to APIs
@@ -65,22 +61,24 @@
 
 **Assignment:** Ass4
 
-----------
-## 05: Object-Oriented Programming, Working with Data Sources and Storages, and Serialization
+
+## 05: Object-Oriented Programming
 **Object-Oriented Programming (OOP)**
 - Object-oriented programming concepts (classes, objects, inheritance, polymorphism)
 - Design patterns and best practices in OOP
 
+**Assignment:** Ass5
+
+## 06: Working with Data Sources, Storages, and Serialization
 **Working with Data Sources and Storages, and Serialization**
 - Reading and writing data from/to various file formats
 - Introduction to data serialization formats (JSON, Parquet, Pickle)
 - Serializing and deserializing data objects
 - Best practices for data serialization and storage
 
-**Assignment:** Ass5
+**Assignment:** Ass6
 
---------------
-## 06: SQL & NoSQL Databases with Python
+## 07: SQL & NoSQL Databases with Python
 **Working with SQL Databases**
 - Introduction to SQL and relational databases
 - SQL basics (SELECT, FROM, WHERE, JOIN)
@@ -97,25 +95,19 @@
 - Querying and manipulating data in NoSQL databases
 - Handling document-based and key-value data models
 
-**Assignment:** Ass6
+**Assignment:** Ass7
 
----------------
-## 07: Building Data Pipelines
+## 08: Building Data Pipelines
 **Data Pipelines**
 - ETL (Extract, Transform, Load)
 - Understanding data pipelines and their components
 - Designing and architecting data pipelines
 - Implementing data ingestion, transformation, and loading (ETL)
 
-**Assignment:** Ass7
+**Assignment:** Ass8
 
---------
 ##  Capstone Project
 **Project Development**
 - Apply all the concepts learned in a real-world data engineering project
 - Work with various data sources including web data and APIs
 - Implement ETL pipelines, data processing, and analysis using Python libraries and tools
-
-**Project:** Final Project
-
---------
