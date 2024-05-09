@@ -356,10 +356,7 @@ By efficiently employing tuples and associated methods, you can improve the read
    ```python
    # Use tuple as keys in dictionaries
    # Example: Mapping coordinates to values
-   data_points = { 
-       			(0, 0): 'origin',
-   				(1, 1): 'diagonal'
-                 }
+   data_points = {(0, 0): 'origin',(1, 1): 'diagonal'}
    
    print(data_points[(0, 0)])  # Output: origin
    ```
