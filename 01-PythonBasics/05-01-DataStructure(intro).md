@@ -7,31 +7,165 @@ In essence, data structures define the layout and relationships between data ele
 **Lists:**
 
 - Lists are one of the most versatile and commonly used data structures in Python.
+
 - They are <u>ordered collections of items</u>, allowing for easy indexing and slicing.
+
 - Lists are mutable, meaning their elements can be modified after creation.
+
 - Elements in a list can be of any data type, and a single list can contain a mix of different types.
+
 - Lists are defined using square brackets `[]` and can be initialized with comma-separated values.
+
+  **Example:**
+
+  ```python
+  my_list = [1, 2, 3, 'a', 'b', 'c']
+  ```
+
+  
 
 **Tuples:**
 
 - Tuples are similar to lists but are immutable, meaning their elements cannot be changed after creation.
+
 - They are typically used to represent fixed sequences of elements, such as coordinates or database records.
+
 - Tuples are defined using parentheses `()` and can be initialized with comma-separated values.
+
 - Tuples support indexing and slicing operations like lists, but attempting to modify a tuple will result in an error.
+
+  **Example:**
+
+  ```python
+  my_tuple = (1, 2, 3, 'a', 'b', 'c')
+  ```
+
+  
 
 **Dictionaries:**
 
 - Dictionaries are unordered collections of key-value pairs, providing fast lookup and retrieval of values based on keys.
+
 - Keys in a dictionary must be unique and immutable, while values can be of any data type.
+
 - Dictionaries are often used to represent mappings between unique identifiers (keys) and associated data (values).
-- They are defined using curly braces `{}` and can be initialized with key-value pairs separated by colons `:`.
+
+- They are defined using curly braces `{}` and can be initialized with key-value pairs separated by colons `:` .
+
+  **Example:**
+
+  ```python
+  my_dict = {'name': 'John', 'age': 30, 'city': 'New York'}
+  ```
+
+  
 
 **Sets:**
 
 - Sets are unordered collections of unique elements, allowing for efficient elimination of duplicate values.
+
 - They are useful for performing set operations such as union, intersection, and difference.
+
 - Sets are defined using curly braces `{}` and can be initialized with comma-separated values.
+
 - Sets support various methods for adding, removing, and manipulating elements, making them suitable for tasks like filtering and deduplication.
+
+  **Example:**
+
+  ```python
+  my_set = {1, 2, 3, 'a', 'b', 'c'}
+  ```
+
+### Operations on Data Structures:
+
+- Common operations on lists include appending, inserting, removing, and slicing elements.
+- Dictionaries support operations like accessing, adding, modifying, and deleting key-value pairs.
+- Tuples are immutable, so operations like adding or removing elements are not possible. However, you can concatenate, slice, and unpack tuples.
+- Sets support operations like adding, removing, and checking for membership. They also support set operations like union, intersection, and difference.
+
+**1. Operations on Lists:**
+```python
+# Define a list
+my_list = [1, 2, 3, 4, 5]
+
+# Append an element
+my_list.append(6)
+
+# Insert an element at a specific index
+my_list.insert(2, 10)
+
+# Remove an element
+my_list.remove(3)
+
+# Access an element using indexing
+print(my_list[0])  # Output: 1
+
+# Slice the list
+print(my_list[1:4])  # Output: [2, 10, 4]
+```
+
+**2. Operations on Dictionaries:**
+```python
+# Define a dictionary
+my_dict = {'name': 'John', 'age': 30, 'city': 'New York'}
+
+# Access a value using a key
+print(my_dict['name'])  # Output: John
+
+# Add a new key-value pair
+my_dict['gender'] = 'Male'
+
+# Modify a value
+my_dict['age'] = 35
+
+# Remove a key-value pair
+del my_dict['city']
+
+print(my_dict)  # Output: {'name': 'John', 'age': 35, 'gender': 'Male'}
+```
+
+**3. Operations on Tuples:**
+```python
+# Define a tuple
+my_tuple = (1, 2, 3, 4, 5)
+
+# Concatenate two tuples
+new_tuple = my_tuple + (6, 7)
+
+# Access an element using indexing
+print(my_tuple[0])  # Output: 1
+
+# Slice the tuple
+print(my_tuple[1:4])  # Output: (2, 3, 4)
+```
+
+**4. Operations on Sets:**
+```python
+# Define a set
+my_set = {1, 2, 3, 4, 5}
+
+# Add an element
+my_set.add(6)
+
+# Remove an element
+my_set.remove(3)
+
+# Check for membership
+print(2 in my_set)  # Output: True
+
+# Union of two sets
+other_set = {4, 5, 6, 7}
+union_set = my_set.union(other_set)
+
+print(union_set)  # Output: {1, 2, 4, 5, 6, 7}
+```
+
+### Choosing the Right Data Structure:
+
+- Lists are suitable for storing collections of items when the order matters, and elements may need to be modified.
+- Dictionaries are ideal for representing mappings between unique identifiers (keys) and associated data (values).
+- Tuples are preferred for fixed sequences of elements that should not change.
+- Sets are useful for eliminating duplicate values and performing set operations efficiently.
 
 Understanding these fundamental data structures is essential for effective Python programming. They provide versatile tools for organizing and manipulating data in a wide range of applications, from simple scripts to complex software systems.
 
@@ -70,14 +204,14 @@ An immutable object is one whose value cannot be changed after it is created. On
 **Example of Immutable Data Type (String):**
 ```python
 # Define a string
-my_string = "Hello"
+my_string = "Hello From Python for Data engineering"
 
 # Attempt to modify the string (which is not possible)
 # This will raise an error
 # my_string[0] = 'h'  # Uncommenting this line will raise a TypeError
 ```
 
-In this example, we define a string `"Hello"`. Strings in Python are immutable, so attempting to modify a character within the string (e.g., changing the first character to lowercase `'h'`) will result in a `TypeError`.
+In this example, we define a string `"Hello From Python for Data engineering"`. Strings in Python are immutable, so attempting to modify a character within the string (e.g., changing the first character to lowercase `'h'`) will result in a `TypeError`.
 
 **Key Differences:**
 
