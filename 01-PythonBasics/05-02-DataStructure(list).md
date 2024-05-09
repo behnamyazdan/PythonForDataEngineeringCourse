@@ -417,7 +417,7 @@ print("Squared numbers:", squared_numbers)  # Output: [1, 4, 9, 16]
 This example demonstrates various operations on lists, including accessing, modifying, appending, inserting, removing, deleting, slicing, copying, sorting, reversing, checking for membership, and using list comprehension. It covers a wide range of features and functionalities of Python lists.
 
 
-## Optional Reading Topics
+# Optional Reading Topics
 
 Here are some key points to consider to using lists in Python:
 
