@@ -466,6 +466,8 @@ print("Decoded text:", decoded_text)
 
 *https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/*
 
+https://tonsky.me/blog/unicode/
+
 ## File I/O and String Manipulation:
 
 String manipulation often plays a crucial role in file input/output operations, such as reading text files, parsing data, and formatting output.
