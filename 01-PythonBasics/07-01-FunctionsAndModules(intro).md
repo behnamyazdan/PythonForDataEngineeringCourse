@@ -810,7 +810,7 @@ Here's a step-by-step trace of the example with input `5`, along with a table sh
 
 This table illustrates how the function progresses through each recursive call, computing intermediate results until it reaches the final result (`120` in this case).
 
-### 2- Fibonacci Sequence:
+#### 2- Fibonacci Sequence:
 
 - The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, typically starting with 0 and 1.
 - We can calculate the nth Fibonacci number recursively using the formula: `fib(n) = fib(n-1) + fib(n-2)`
@@ -825,7 +825,9 @@ def fibonacci(n):
 print(fibonacci(5))  # Output: 5 (0, 1, 1, 2, 3, 5)
 ```
 
-###  3- Binary Search:
+
+
+#### 3- Binary Search:
 
 - Binary search is an efficient search algorithm that finds the position of a target value within a sorted array.
 - We can implement binary search recursively by dividing the array in half and searching the appropriate subarray based on the comparison with the target value.
@@ -848,7 +850,7 @@ target = 7
 print(binary_search(arr, target, 0, len(arr)-1))  # Output: 3 (index of target in arr)
 ```
 
-### 4- Power Function:
+#### 4- Power Function:
 
 - The power function calculates `x` raised to the power of `n`.
 - We can implement the power function recursively using the formula: `pow(x, n) = x * pow(x, n-1)`
@@ -867,7 +869,7 @@ print(power(2, 3))  # Output: 8 (2^3 = 2 * 2 * 2)
 
 ## Optional Reading Topics:
 
-#### Decorators in Python:
+### Decorators in Python:
 
 Decorators are a powerful feature in Python that allow you to modify or extend the behavior of functions or methods without changing their actual code. They are essentially functions that take another function as an argument and return a new function with some additional functionality. Decorators are extensively used in Python for various purposes, such as adding logging, authentication, caching, or monitoring to functions.
 
