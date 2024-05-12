@@ -2,5 +2,5 @@
 /.venv/
 ./python01.png
 /.idea/
-./main.py
+main.py
 ./FinalProject/
