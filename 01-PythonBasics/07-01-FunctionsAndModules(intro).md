@@ -126,19 +126,19 @@ In Python, functions can have different types of parameters, each serving a spec
         ```
      
       
-   4. ### Combining Parameter Types:
+   #### Combining Parameter Types:
    
-      - Parameters can be combined to take advantage of their respective features.
-      - For example, you can have a mix of positional and keyword parameters, with some having default values.
-      - Example:
-        ```python
-        def greet(name, age=18, greeting="Hello"):
-            print(f"{greeting}, {name}! You are {age} years old.")
-        
-        greet("Alice")  # Using default age and greeting
-        greet("Bob", greeting="Hi")  # Specifying only the greeting
-        greet(age=30, name="Charlie", greeting="Hey")  # Using all keyword arguments
-        ```
+   - Parameters can be combined to take advantage of their respective features.
+   - For example, you can have a mix of positional and keyword parameters, with some having default values.
+   - Example:
+     ```python
+     def greet(name, age=18, greeting="Hello"):
+         print(f"{greeting}, {name}! You are {age} years old.")
+     
+     greet("Alice")  # Using default age and greeting
+     greet("Bob", greeting="Hi")  # Specifying only the greeting
+     greet(age=30, name="Charlie", greeting="Hey")  # Using all keyword arguments
+     ```
 
 #### Best Practices for Defining Function Parameters
 
@@ -173,6 +173,7 @@ Defining function parameters effectively is essential for writing clean, readabl
      ```
 
 4. **Use Default Parameters Sparingly:**
+   
    - Default parameters can make functions more flexible, but excessive use can lead to confusion and unexpected behavior.
    - Only use default parameters when they provide clear benefits and improve the function's usability.
    - Example:
@@ -180,7 +181,7 @@ Defining function parameters effectively is essential for writing clean, readabl
      def greet(name, greeting="Hello"):
          return f"{greeting}, {name}!"
      ```
-
+   
 5. **Use *args and \*\*kwargs for Variable Arguments:**
    
    - When a function needs to accept a variable number of positional or keyword arguments, use `*args` and `**kwargs`.
