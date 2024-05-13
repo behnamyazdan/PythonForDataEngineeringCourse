@@ -4,6 +4,6 @@
 /.idea/
 main.py
 ./FinalProject/
-/.gitignore
+.gitignore
 ./.gitignore
 .idea/.gitignore
