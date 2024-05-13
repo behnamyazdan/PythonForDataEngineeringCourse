@@ -6,3 +6,8 @@ main.py
 ./FinalProject/
 /.gitignore
 ./.gitignore
+.idea/.gitignore
+.idea/.gitignore
+
+.idea
+.venv
