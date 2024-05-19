@@ -20,6 +20,9 @@
   - Sets
 - String manipulation
 - Functions and modules
-- Error handling (try-except blocks)
+  - Functions
+  - Modules
+
+- Error handling
 
 **Assignment:** Ass1

@@ -18,9 +18,10 @@
   - Sets
 - String manipulation
 - Functions and modules
-- Error handling (try-except blocks)
-
-**Assignment:** Ass1
+  - Functions
+  - Modules
+- Error handling
+- Assignments: Python basics assignments
 
 ## 02: Data Manipulation and Analysis
 **Data Manipulation with Pandas**
