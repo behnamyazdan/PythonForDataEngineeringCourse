@@ -17,11 +17,11 @@
   - [Dictionaries](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/05-04-DataStructure(dictionaries).md)
   - [Sets](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/05-05-DataStructure(sets).md)
 - [String manipulation](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/06-StringManipulation.md)
-- Modular Programming (introduction)
-  - Functions
-  - Modules
-- Error handling
-- Assignments: Python basics assignments
+- [Modular Programming (introduction)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/07-01-ModularProgramming.md)
+  - [Functions](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/07-02-Functions.md)
+  - [Modules](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/07-03-Modules.md)
+- [Error handling](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/08-ErrorHandling.md)
+- [Assignments: Python basics assignments](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/PythonBasicsAssignments.md)
 
 ## 02: Data Manipulation and Analysis
 **Data Manipulation with Pandas**

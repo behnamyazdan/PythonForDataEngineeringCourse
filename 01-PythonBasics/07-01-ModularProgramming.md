@@ -26,8 +26,7 @@ Packaging in Python involves organizing and distributing modules so they can be 
 3. **Distribution:** Tools like `setuptools` and `distutils` help in packaging Python projects so they can be shared and installed via package managers like `pip`.
 4. **Package Indexes:** Repositories like the Python Package Index (PyPI) host Python packages, making them available for download and installation.
 
-
-<img src="https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/_assets/packaging_in_python.png">
+<img src="https://raw.githubusercontent.com/behnamyazdan/PythonForDataEngineeringCourse/main/_assets/packaging_in_python.png">
 
 ### Steps for Creating a Python Package:
 
