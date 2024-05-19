@@ -33,10 +33,13 @@ Data analysis is a systematic approach that involves several stages, each critic
 
    EDA employs a variety of techniques to explore data, ranging from simple statistics to complex visualizations. Here are some common techniques used in EDA:
 
-   1. Descriptive Statistics
-   2. Data Visualization
-   3. Correlation Analysis
-   4. Data Profiling
+   - Descriptive Statistics
+
+   - Data Visualization
+
+   - Correlation Analysis
+
+   - Data Profiling
 
    **Purpose of EDA**
 
