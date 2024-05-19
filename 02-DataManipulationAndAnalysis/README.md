@@ -2,7 +2,6 @@
 **Introduction to Data Analysis**
 
 - Introduction
-
 - The Data Analysis Process
 - Importance of data analysis in various fields (e.g., finance, healthcare, marketing, social sciences)
 - The role of Python libraries in data analysis
