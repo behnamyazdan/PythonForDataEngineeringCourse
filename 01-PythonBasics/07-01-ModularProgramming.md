@@ -27,7 +27,7 @@ Packaging in Python involves organizing and distributing modules so they can be 
 4. **Package Indexes:** Repositories like the Python Package Index (PyPI) host Python packages, making them available for download and installation.
 
 
-<img src="./../_assets/packaging_in_python.png">
+<img src="https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/_assets/packaging_in_python.png">
 
 ### Steps for Creating a Python Package:
 
