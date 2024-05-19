@@ -13,11 +13,11 @@
   - [Control flow examples](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/04-06-ControlFlow(examples).md)
 - [Data structures (lists, tuples, dictionaries, sets)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/05-01-DataStructure(intro).md)
   - [Lists](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/05-02-DataStructure(list).md)
-  - Tuples
-  - Dictionaries
-  - Sets
-- String manipulation
-- Functions and modules
+  - [Tuples](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/05-03-DataStructure(tuple).md)
+  - [Dictionaries](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/05-04-DataStructure(dictionaries).md)
+  - [Sets](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/05-05-DataStructure(sets).md)
+- [String manipulation](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/06-StringManipulation.md)
+- Modular Programming (introduction)
   - Functions
   - Modules
 - Error handling
