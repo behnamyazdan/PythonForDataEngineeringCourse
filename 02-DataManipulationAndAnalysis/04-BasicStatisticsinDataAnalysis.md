@@ -81,15 +81,23 @@ Inferential statistics make inferences and predictions about a population based 
 
 2. ### Hypothesis Testing:
     A method of making statistical decisions using experimental data. It includes tests like t-tests, chi-square tests, and ANOVA.
-   - **t-test:** Compares the means of two groups.
-     ```python
-     t_stat, p_value = stats.ttest_ind(df['group1'], df['group2'])
-     ```
-   - **Chi-square test:** Tests the independence between categorical variables.
-     ```python
-     chi2, p, dof, ex = stats.chi2_contingency(pd.crosstab(df['var1'], df['var2']))
-     ```
+   
+   **t-test:** Compares the means of two groups.
+   
+   ```python
+   t_stat, p_value = stats.ttest_ind(df['group1'], df['group2'])
+   ```
+   
+   
 
+    **Chi-square test:** Tests the independence between categorical variables.
+    
+    ```python
+    chi2, p, dof, ex = stats.chi2_contingency(pd.crosstab(df['var1'], df['var2']))
+    ```
+    
+    
+    
 3. ### Correlation and Regression:
    - **Correlation:** Measures the strength and direction of the linear relationship between two variables.
      ```python
