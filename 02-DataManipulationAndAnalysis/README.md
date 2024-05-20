@@ -8,6 +8,7 @@
 
 **Data Manipulation with Pandas**
 
+- Setting Up Jupyter Notebook and Pandas
 - Introduction to Pandas and its data structures (Series, DataFrame)
 - Data manipulation (filtering, sorting, grouping)
 - Reading and writing data from/to different file formats
