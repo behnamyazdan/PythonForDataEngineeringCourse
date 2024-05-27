@@ -344,7 +344,7 @@ In Pandas, `iloc` is a powerful attribute used for integer-based indexing and se
 
 **Additional Notes:**
 
-- Slicing with integers is also possible with `iloc`. For example, `df.iloc[1:4]` selects rows from index 1 (inclusive) to index 3 (exclusive).
+- Slicing with integers is also possible with `iloc`. For example, `df.iloc[1:4]` selects rows from index 1 (inclusive) to index 4 (exclusive).
 - Out-of-bounds indexing raises an `IndexError`. Slicing allows some flexibility, handling cases where the end bound might be out of range.
 - For label-based selection (using index or column names), consider using `.loc` as it's generally more readable.
 
