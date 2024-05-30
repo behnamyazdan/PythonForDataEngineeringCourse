@@ -63,7 +63,7 @@ plt.title('Basic Line Plot')
 plt.show()
 ```
 
-<img src="../_assets/basic_line_plot.png">
+<img src="https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/_assets/basic_line_plot.png?raw=true">
 
 ### Key Considerations
 
@@ -94,7 +94,7 @@ Understand how to create and manipulate figures and axes. This is especially use
    plt.show()
    ```
 
-<img src="../_assets/multiple_subplots_example.png">
+<img src="https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/_assets/multiple_subplots_example.png">
 
 **3-Customizing Plots**
 
@@ -115,7 +115,7 @@ Customize your plots to make them more informative and visually appealing. This 
    plt.show()
    ```
 
-<img src="../_assets/customized_plot.png">
+<img src="https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/_assets/customized_plot.png">
 
 **4- Saving Plots**
 
@@ -170,7 +170,7 @@ plt.show()
 
 
 
-<img src="../_assets/subplot_multiplot.png">
+<img src="https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/_assets/subplot_multiplot.png">
 
 
 
@@ -249,7 +249,7 @@ plt.show()
    plt.show()
    ```
 
-<img src="../_assets/customized_seaborn_lineplot.png">
+<img src="https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/_assets/customized_seaborn_lineplot.png">
 
 **4- Understanding Plot Types**
 
@@ -307,7 +307,7 @@ plt.title('Histogram with KDE')
 plt.show()
 ```
 
-<img src="../_assets/seaborn_histogram_with_kde.png">
+<img src="https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/_assets/seaborn_histogram_with_kde.png">
 
 #### Box Plots
 
@@ -322,7 +322,7 @@ plt.title('Box Plot')
 plt.show()
 ```
 
-<img src="../_assets/seaborn_box_plot.png">
+<img src="https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/_assets/seaborn_box_plot.png">
 
 #### Violin Plots
 
@@ -336,7 +336,7 @@ plt.title('Violin Plot')
 plt.show()
 ```
 
-<img src="../_assets/seaborn_violent_plot.png">
+<img src="https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/_assets/seaborn_violent_plot.png">
 
 
 
