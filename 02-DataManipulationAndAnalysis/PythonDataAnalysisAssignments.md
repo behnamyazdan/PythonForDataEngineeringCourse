@@ -4,9 +4,6 @@ This project simulates real-world data analysis using Pandas. Your task is to an
 
 **Dataset:**
 
-- Use this dataset:
-  https://www.kaggle.com/datasets/carrie1/ecommerce-data
-
 - You will be given a CSV file named 
 
   ```
@@ -65,3 +62,65 @@ This project simulates real-world data analysis using Pandas. Your task is to an
   - Are there any seasonal trends in order patterns?
 
 This project allows students to practice essential Pandas techniques like data loading, cleaning, filtering, sorting, grouping, aggregation, and saving to Parquet files. It encourages them to explore real-world data analysis scenarios and gain practical experience working with e-commerce datasets.
+
+
+
+-------
+
+# Exploratory Data Analysis (EDA) using Pandas, NumPy, and Matplotlib
+
+#### Objective:
+The objective of this assignment is to perform an exploratory data analysis (EDA) on a given dataset using Pandas, NumPy, and Matplotlib. You will load the dataset, clean and preprocess the data, and create various visualizations to uncover insights and patterns.
+
+#### Instructions:
+
+1. **Dataset Selection:**
+   - Choose one of the following datasets for your analysis. These datasets are available on [Kaggle](https://www.kaggle.com/datasets):
+     - [Titanic](https://www.kaggle.com/c/titanic/data)
+     - [Iris Species](https://www.kaggle.com/datasets/uciml/iris)
+     - [House Prices](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data)
+     - [Wine Quality](https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009)
+
+2. **Loading the Dataset:**
+   - Import the necessary libraries (`pandas`, `numpy`, `matplotlib.pyplot`).
+   - Load the dataset into a Pandas DataFrame.
+   - Display the first few rows of the DataFrame.
+
+3. **Data Cleaning and Preprocessing:**
+   - Check for missing values and handle them appropriately (e.g., filling, dropping).
+   - Convert categorical variables to numerical if necessary (e.g., using `pd.get_dummies` or `LabelEncoder`).
+   - Remove any duplicates if present.
+
+4. **Descriptive Statistics:**
+   - Generate descriptive statistics for numerical columns (mean, median, standard deviation, etc.).
+   - Provide summary statistics for categorical columns.
+
+5. **Data Visualization:**
+   - Create at least five different types of visualizations using Matplotlib:
+     1. Line Plot
+     2. Scatter Plot
+     3. Bar Plot
+     4. Histogram
+     5. Box Plot
+   - Customize the plots with appropriate titles, labels, and legends.
+
+6. **Exploratory Questions:**
+   - Answer the following questions using the visualizations and analyses:
+     1. What are the key characteristics of the dataset?
+     2. Are there any noticeable patterns or trends in the data?
+     3. How do different features relate to each other?
+     4. Are there any outliers or anomalies in the data?
+     5. What are the distributions of the numerical features?
+
+7. **Reporting:**
+   - Write a summary report (500-1000 words) detailing your findings from the EDA.
+   - Include the visualizations and describe the insights gained from each.
+
+#### Submission:
+- Submit a Jupyter Notebook containing all the code and visualizations.
+
+#### Evaluation Criteria:
+- **Completeness:** All steps of the assignment are completed.
+- **Code Quality:** Code is clean, well-documented, and follows best practices.
+- **Visualizations:** Plots are clear, well-labeled, and provide meaningful insights.
+- **Analysis:** Answers to exploratory questions are thorough and demonstrate a good understanding of the data.
