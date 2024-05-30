@@ -117,8 +117,8 @@ print(grouped_df)
 
 ```python
 # Calculate price percentiles within each category (add a 'Price Percentile' column)
-def price_percentile(group):
-  return group['Price'].rank(pct=True)
+def price_percentile(prices):
+    return prices.rank(pct=True)
 
 df['Price Percentile'] = df.groupby('Category')['Price'].transform(price_percentile)
 print(df)
