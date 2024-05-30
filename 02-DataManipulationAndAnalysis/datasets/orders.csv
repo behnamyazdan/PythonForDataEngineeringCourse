@@ -1,51 +1,51 @@
-Order ID,Product Name,Price,Product Description,Category,City
-1001,"Men's Cotton Shirt",24.99,"100% Cotton, Regular Fit",None,"New York"
-1002,"Gaming Laptop (i7 Processor)",899.99,"16GB RAM, 1TB HDD",None,"Los Angeles"
-1003,"Box of Pencils (12 count)",2.50,"HB Pencils, Wood-Cased",None,"Chicago"
-1004,"Fresh Apples (1 kg)",None,"Organic, Seasonal",None,"San Francisco"
-1005,"Travel Mug",19.95,"Stainless Steel, Double Walled",None,"Austin"
-1006,"10oz Coffee Beans",14.50,"French Roast, Ground",None,"Seattle"
-1007,"Running Shoes (women's)","79.00",None,"Athletic",None,"Berlin"
-1008,"12 Pack of Soda",3.99,"Regular Flavor",None,"New York"
-1009,"Headphones (wireless)",129.99,"Noise-Cancelling, Bluetooth",None,"Los Angeles"
-1010,"Invalid Price!@#",None,"Description with special characters",None,"Chicago"
-1011,"Box of Markers (24 pack)",None,"Fine Tip, Assorted Colors",None,"San Francisco"
-1012,"Large Yoga Mat",39.99,"6mm Thick, Non-Slip",None,"Austin"
-1013,"1 pound Bag of Almonds",11.99,None,"Roasted, Salted",None,"Seattle"
-1014,"Kids' T-Shirt (size L)",9.99,"Graphic Tee, Cotton Blend",None,"Berlin"
-1015,"$25 Gift Card",25.00,"For any purchase in our store",None,"New York"
-1016,"Water Bottle",8.99,None,None,"Austin"
-1017,"Electric Kettle",34.50,"1.5L Capacity, Stainless Steel",None,"Seattle"
-1018,"Notebook (100 pages)",3.20,"College Ruled, Spiral Bound",None,"San Francisco"
-1019,"Desk Lamp",27.99,"LED, Adjustable Arm",None,"Chicago"
-1020,"Smartphone Stand",5.49,None,None,"Los Angeles"
-1021,"Bluetooth Speaker",45.00,"Portable, Rechargeable",None,"New York"
-1022,"Pack of Batteries (AA)",None,"12 Pack, Alkaline",None,"Berlin"
-1023,"Men's Leather Belt",None,"Genuine Leather, Adjustable",None,"Austin"
-1024,"Women's Perfume",55.00,"Floral Scent, 50ml",None,"San Francisco"
-1025,"Laptop Bag",None,"Water-Resistant, Padded",None,"Seattle"
-1026,"Shampoo (250ml)",7.50,None,None,"Chicago"
-1027,"Garden Hose (50ft)",None,"Heavy Duty, Flexible",None,"Berlin"
-1028,"Digital Camera",350.00,"24MP, 1080p Video",None,"Los Angeles"
-1029,"Pack of Sticky Notes",1.99,"Assorted Colors",None,"New York"
-1030,"Ergonomic Office Chair",129.99,None,None,"Austin"
-1031,"Frying Pan (Non-Stick)",29.99,"12-inch, Dishwasher Safe",None,"Seattle"
-1032,"Sunglasses (UV Protection)",25.00,None,None,"San Francisco"
-1033,"Wireless Mouse",19.99,"Optical, Ergonomic",None,"Chicago"
-1034,"Set of Kitchen Knives",None,"6 Piece, Stainless Steel",None,"Los Angeles"
-1035,"Electric Toothbrush",49.99,"Rechargeable, 3 Modes",None,"New York"
-1036,"Travel Pillow",14.95,"Memory Foam, Compact",None,"Berlin"
-1037,"Bag of Organic Quinoa (1kg)",None,None,None,"Austin"
-1038,"Box of Chocolates",None,"Assorted Flavors, 250g",None,"Seattle"
-1039,"Pack of Light Bulbs (4 pack)",None,"LED, 60W Equivalent",None,"San Francisco"
-1040,"Men's Running Shorts",20.00,"Quick-Dry, Lightweight",None,"Chicago"
-1041,"$50 Gift Card",50.00,"For any purchase in our store",None,"Los Angeles"
-1042,"Blender",85.99,"1000W, 3 Speed",None,"New York"
-1043,"Women's Jacket (Size M)",None,"Waterproof, Breathable",None,"Berlin"
-1044,"Pack of AAA Batteries",None,None,None,"Austin"
-1045,"Electric Scooter",299.99,"Foldable, 15mph",None,"Seattle"
-1046,"Instant Pot (6 Quart)",89.99,"7-in-1, Stainless Steel",None,"San Francisco"
-1047,"Pair of Socks",4.50,None,None,"Chicago"
-1048,"Set of Mixing Bowls",24.99,"Stainless Steel, 5 Pieces",None,"Los Angeles"
-1049,"Wireless Charger",19.99,"Fast Charging, Qi Compatible",None,"New York"
-1050,"Men's Watch",149.99,None,None,"Berlin"
+order_id,customer_id,product_id,product_name,category,price,order_date,city,country
+1001,2001,3001,"Men's Cotton Shirt",clothing,24.99,2023-05-01,New York,USA
+1002,2002,3002,"Gaming Laptop (i7 Processor)",electronics,899.99,2023-05-02,Los Angeles,USA
+1003,2003,3003,"Box of Pencils (12 count)",stationery,2.50,2023-05-03,Chicago,USA
+1004,2004,3004,"Fresh Apples (1 kg)",grocery,5.99,2023-05-04,San Francisco,USA
+1005,2005,3005,"Travel Mug",home,-19.95,2023-05-05,Austin,USA
+1006,2006,3006,"10oz Coffee Beans",grocery,14.50,2023-05-06,Seattle,USA
+1007,2007,3007,"Running Shoes (women's)",clothing,79.00,2023-13-07,Berlin,Germany
+1008,2008,3008,"12 Pack of Soda",grocery,3.99,,New York,USA
+1009,2009,3009,"Headphones (wireless)",electronics,129.99,2023-05-09,Los Angeles,USA
+1010,2010,3010,"Office Chair",furniture,,2023-05-10,Chicago,USA
+1011,2011,3011,"Box of Markers (24 pack)",stationery,12.50,2023-05-11,San Francisco,USA
+1012,2012,3012,"Large Yoga Mat",sports,39.99,2023-05-12,Austin,USA
+1013,2013,3013,"1 pound Bag of Almonds",grocery,11.99,2023-05-13,Seattle,USA
+1014,2014,3014,"Kids' T-Shirt (size L)",clothing,9.99,2023-05-14,Berlin,Germany
+1015,2015,3015,"$25 Gift Card",gift,25.00,2023-05-15,New York,USA
+1016,2016,3016,"Water Bottle",home,8.99,2023-05-16,Austin,USA
+1017,2017,3017,"Electric Kettle",home,34.50,2023-05-17,Seattle,USA
+1018,2018,3018,"Notebook (100 pages)",stationery,3.20,2023-05-18,San Francisco,USA
+1019,2019,3019,"Desk Lamp",furniture,27.99,2023-05-19,Chicago,USA
+1020,2020,3020,"Smartphone Stand",electronics,5.49,2023-05-20,Los Angeles,USA
+1021,2021,3021,"Bluetooth Speaker",electronics,45.00,2023-05-21,New York,USA
+1022,2022,3022,"Pack of Batteries (AA)",electronics,7.99,2023-05-22,Berlin,Germany
+1023,2023,3023,"Men's Leather Belt",clothing,-15.00,2023-05-23,Austin,USA
+1024,2024,3024,"Women's Perfume",beauty,55.00,2023-05-24,San Francisco,USA
+1025,2025,3025,"Laptop Bag",electronics,49.99,2023-05-25,Seattle,USA
+1026,2026,3026,"Shampoo (250ml)",beauty,7.50,2023-05-26,Chicago,USA
+1027,2027,3027,"Garden Hose (50ft)",home,25.00,2023-05-27,Berlin,Germany
+1028,2028,3028,"Digital Camera",electronics,350.00,invalid-date,Los Angeles,USA
+1029,2029,3029,"Pack of Sticky Notes",stationery,1.99,2023-05-29,New York,USA
+1030,2030,3030,"Ergonomic Office Chair",furniture,129.99,2023-05-30,Austin,USA
+1031,2031,3031,"Frying Pan (Non-Stick)",home,29.99,2023-05-31,Seattle,USA
+1032,2032,3032,"Sunglasses (UV Protection)",accessories,25.00,2023-06-01,San Francisco,USA
+1033,2033,3033,"Wireless Mouse",electronics,19.99,2023-06-02,Chicago,USA
+1034,2034,3034,"Set of Kitchen Knives",home,50.00,2023-06-03,Los Angeles,USA
+1035,2035,3035,"Electric Toothbrush",beauty,49.99,2023-06-04,New York,USA
+1036,2036,3036,"Travel Pillow",accessories,14.95,2023-06-05,Berlin,Germany
+1037,2037,3037,"Bag of Organic Quinoa (1kg)",grocery,9.99,2023-06-06,Austin,USA
+1038,2038,3038,"Box of Chocolates",grocery,15.00,2023-06-07,Seattle,USA
+1039,2039,3039,"Pack of Light Bulbs (4 pack)",home,7.99,2023-06-08,San Francisco,USA
+1040,2040,3040,"Men's Running Shorts",clothing,20.00,2023-06-09,Chicago,USA
+1041,2041,3041,"$50 Gift Card",gift,50.00,2023-06-10,Los Angeles,USA
+1042,2042,3042,"Blender",home,85.99,2023-06-11,New York,USA
+1043,2043,3043,"Women's Jacket (Size M)",clothing,60.00,2023-06-12,Berlin,Germany
+1044,2044,3044,"Pack of AAA Batteries",electronics,5.99,2023-06-13,Austin,USA
+1045,2045,3045,"Electric Scooter",sports,299.99,2023-06-14,Seattle,USA
+1046,2046,3046,"Instant Pot (6 Quart)",home,89.99,2023-06-15,San Francisco,USA
+1047,2047,3047,"Pair of Socks",clothing,4.50,2023-06-16,Chicago,USA
+1048,2048,3048,"Set of Mixing Bowls",home,24.99,2023-06-17,Los Angeles,USA
+1049,2049,3049,"Wireless Charger",electronics,19.99,2023-06-18,New York,USA
+1050,2050,3050,"Men's Watch",accessories,149.99,2023-06-19,Berlin,Germany

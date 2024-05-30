@@ -26,25 +26,61 @@ This project simulates real-world data analysis using Pandas. Your task is to an
 
 1. **Import Libraries and Load Data:**
    - Begin by importing pandas and reading the `orders.csv` file into a pandas DataFrame.
+
 2. **Initial Data Exploration:**
    - Get basic information about the DataFrame (shape, data types, summary statistics).
    - Identify and handle any missing values present in the data.
+
 3. **Data Cleaning and Preprocessing:**
    - Check for inconsistencies or errors in the data (e.g., invalid dates, negative prices).
+
    - Clean the data by correcting errors, removing outliers, or imputing missing values (if applicable).
+
    - Convert the `order_date` column to a datetime format for further analysis.
+
+   - Decide whether to fill, drop, or leave the missing values based on your analysis.
+
+   - Ensure all data types are appropriate for analysis (e.g., convert `price` to numeric).
+
+   - Remove any duplicates if present.
+
+     
+
 4. **Data Manipulation:**
    - **Filter Data:** Filter orders based on specific criteria like order date range, product category, or customer location.
    - **Sort Data:** Sort orders by various attributes like total order value, order date, or product price.
    - **Group Data:** Group orders by customer, product category, or city and calculate aggregations like total sales, average order value, or most frequent purchases.
+
 5. **Advanced Analysis:**
    - Calculate the number of orders per customer and identify the most frequent buyers.
    - Analyze purchase trends by category or city over time (e.g., monthly sales).
    - Explore the relationship between order value and customer location.
-6. **Save Results:**
+
+6. **Data Visualization:**
+
+   Create various visualizations to explore the data, such as:
+
+   - Line plots for trends over time (if applicable).
+   - Scatter plots to explore relationships between numerical variables.
+   - Bar plots for categorical data counts.
+   - Histograms to understand the distribution of numerical data.
+   - Box plots to detect outliers.
+
+7. **Exploratory Analysis:**
+
+    Answer key questions about the data:
+  - What is the price distribution of products?
+  - Are there any patterns in product purchases over time?
+  - How do prices vary by city and country?
+  - Which product category has the highest total sales?
+  - In which city do customers tend to place the most expensive orders?
+  - Which customers are the most frequent buyers?
+
+8. **Save Results:**
+
    - Save the cleaned and analyzed DataFrame to a Parquet file (`orders_cleaned.parquet`) for efficient storage and later use.
 
-7. **Additional Tips**
+9. **Additional Tips**
 
    - Comment your code to explain each step.
 
@@ -55,11 +91,7 @@ This project simulates real-world data analysis using Pandas. Your task is to an
 **Deliverables:**
 
 - A Jupyter Notebook or Python script documenting your analysis process, including code for each task.
-- Answers to the following questions based on your analysis:
-  - Which product category has the highest total sales?
-  - In which city do customers tend to place the most expensive orders?
-  - Which customers are the most frequent buyers?
-  - Are there any seasonal trends in order patterns?
+
 
 This project allows students to practice essential Pandas techniques like data loading, cleaning, filtering, sorting, grouping, aggregation, and saving to Parquet files. It encourages them to explore real-world data analysis scenarios and gain practical experience working with e-commerce datasets.
 
