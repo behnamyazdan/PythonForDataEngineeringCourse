@@ -66,12 +66,12 @@ def load_data():
     ''')
 
     # Load transformed data
-    product_sales = pd.read_csv('transformed_data/Product_Sales.csv')
-    customer_sales = pd.read_csv('transformed_data/Customer_Sales.csv')
+    product_sales = pd.read_csv('transformed_data/product_Sales.csv')
+    customer_sales = pd.read_csv('transformed_data/customer_Sales.csv')
 
     # Insert data into tables
-    product_sales.to_sql('Product_Sales', conn, if_exists='replace', index=False)
-    customer_sales.to_sql('Customer_Sales', conn, if_exists='replace', index=False)
+    product_sales.to_sql('product_sales', conn, if_exists='replace', index=False)
+    customer_sales.to_sql('customer_sales', conn, if_exists='replace', index=False)
 
     # Commit and close connection
     conn.commit()
