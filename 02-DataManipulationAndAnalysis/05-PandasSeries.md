@@ -164,8 +164,21 @@ print(my_series)
 - Replace missing values (NaN) with specific values or methods:
 
 ```python
-my_series["age"] = my_series["age"].fillna(25)  # Fills missing values in "age" with 25
+import pandas as pd
+
+# Creating a sample Series with a missing value
+data = {"name": "Alice", "age": None, "city": "New York"}  # Notice 'age' is None
+my_series = pd.Series(data)
+
+print("Original Series:")
 print(my_series)
+
+# Fill missing values in the Series
+my_series = my_series.fillna({"age": 25})
+
+print("\nSeries after filling missing values:")
+print(my_series)
+
 ```
 
 **Beyond the Basics:**
