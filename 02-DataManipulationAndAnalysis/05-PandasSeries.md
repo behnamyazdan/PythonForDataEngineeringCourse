@@ -88,8 +88,27 @@ print(sub_series)
 - Use boolean indexing to filter elements based on conditions:
 
 ```python
-filtered_series = my_series[my_series > 25]  # Selects elements with values greater than 25
+import pandas as pd
+
+# Creating a sample Series
+data = {"name": "Alice", "age": 30, "city": "New York"}
+my_series = pd.Series(data)
+
+print("Original Series:")
+print(my_series)
+
+# Convert elements to numeric, coercing errors to NaN
+numeric_series = pd.to_numeric(my_series, errors='coerce')
+
+# Filter out NaN values (non-numeric elements)
+numeric_only_series = numeric_series.dropna()
+
+# Apply the condition to filter elements greater than 25
+filtered_series = numeric_only_series[numeric_only_series > 25]
+
+print("\nFiltered Series (elements greater than 25):")
 print(filtered_series)
+
 ```
 
 4. ### Arithmetic Operations:
@@ -97,6 +116,9 @@ print(filtered_series)
 - Perform basic arithmetic operations on the entire Series or between Series:
 
 ```python
+# Convert elements to numeric, coercing errors to NaN
+my_series = pd.to_numeric(my_series, errors='coerce')
+
 # Add a constant value
 added_series = my_series + 5
 print(added_series)
@@ -142,28 +164,8 @@ print(my_series)
 - Replace missing values (NaN) with specific values or methods:
 
 ```python
-import pandas as pd
-import numpy as np
-
-# Creating a sample Series
-data = {"name": "Alice", "age": 30, "city": "New York"}
-my_series = pd.Series(data)
-
-print("Original Series:")
+my_series["age"] = my_series["age"].fillna(25)  # Fills missing values in "age" with 25
 print(my_series)
-
-# Convert elements to numeric, coercing errors to NaN
-numeric_series = pd.to_numeric(my_series, errors='coerce')
-
-# Filter out NaN values (non-numeric elements)
-numeric_only_series = numeric_series.dropna()
-
-# Apply the condition to filter elements greater than 25
-filtered_series = numeric_only_series[numeric_only_series > 25]
-
-print("\nFiltered Series (elements greater than 25):")
-print(filtered_series)
-
 ```
 
 **Beyond the Basics:**
