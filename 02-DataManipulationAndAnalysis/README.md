@@ -1,33 +1,23 @@
-# 02: Data Manipulation and Analysis
-**Introduction to Data Analysis**
-
-- Introduction
-- The Data Analysis Process
-- Importance of data analysis in various fields (e.g., finance, healthcare, marketing, social sciences)
-- The role of Python libraries in data analysis
-
-**Data Manipulation with Pandas**
-
-- Setting Up Jupyter Notebook and Pandas
-- Introduction to Pandas and its data structures (Series, DataFrame)
-- Data manipulation (filtering, sorting, grouping)
-- Reading and writing data from/to different file formats
-- Data cleaning and transformation techniques
-- Handling missing data
-- Merging and joining DataFrames
-
-**Numerical Computations with NumPy**
-- Introduction to NumPy arrays and mathematical operations
-- Array operations (slicing, indexing, etc.)
-- Array manipulation (reshaping, stacking, splitting)
-- Working with random numbers
-- Linear algebra operations
-
-**Data Visualization with Matplotlib and Seaborn**
-
-- Data visualization basics
-- Line plots, scatter plots, bar plots
-- Histograms, box plots, violin plots
-- Customizing plots and adding labels, titles, etc.
-
-**Assignment:** Ass2
+# 02: Data Manipulation, Analysis and Visualization
+- [Introduction to Data Analysis](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/01-IntroductopnToDataAnalysis.md)
+- [Setting Up Jupyter Notebook and Pandas](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/02-SettingUpJupyterNotebookandPandas.md)
+- [Data Manipulation with Pandas](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/03-IntroductionToPandas.md)
+  - [Introduction to Pandas](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/03-IntroductionToPandas.md)
+  - [Basics statistics in data analysis (descriptive statistics, shape of distribution, inferential statistics)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/04-BasicStatisticsinDataAnalysis.md)
+  - [Pandas Series](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/05-PandasSeries.md)
+  - [Pandas DataFrame](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/06-PandasDataframe.md)
+  - [Reading and writing data with Pandas](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/07-ReadingAndWritingData.md)
+  - [Accessing and selecting data](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/08-AcceccingAndSelectingData.md)
+  - [Data manipulation (filtering, sorting, grouping)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/09-DataManipulation.md)
+  - [Data Cleaning](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/10-DataCleaning.md)
+  - [Merge, Join and Concatenating](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/11-Merge-JoinAndConcat.md)
+- [Numerical computations with NumPy](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/12-IntroductionToNumpy.md)
+  - [NumPy array operations (slicing, indexing)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/13-NumpyArrayOperations.md)
+  - [NumPy array manipulation](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/14-NumpyArrayManipulation.md)
+  - [Working with random numbers in NumPy](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/15-WorkingWithRandomNumbersInNumpy.md)
+  - [Analyzing sales data with NumPy](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/16-AnalyzingSalesDatawithNumPy.md)
+- [Data visualization Basics](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/17-DataVisualizationBasics.md)
+  - [Line plot, Scatter plot, and Bar plot](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/18-LinePlots-ScatterPlots-Bar%20Plots.md)
+  - [Histogram, Box plot, and Violin plot](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/19-Histograms-BoxPlots-ViolinPlots.md)
+- [**Assignment 1 :** Analyzing E-commerce Orders using Pandas](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/PythonDataAnalysisAssignments.md)
+- [**Assignment 2 :** Exploratory Data Analysis (EDA) using Pandas, NumPy, and Matplotlib](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/PythonDataAnalysisAssignments.md#exploratory-data-analysis-eda-using-pandas-numpy-and-matplotlib)
