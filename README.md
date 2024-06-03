@@ -1,7 +1,6 @@
 ### Python for Data Engineering Course
 
 ## 01: Python Basics
-**Python Fundamentals**
 - [Introduction](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/00-Introductoin.md)
 - [First Python program](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/01-FirstStep.md)
 - [Basic Data types (int, float, str, bool)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/02-DataTypes.md)
