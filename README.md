@@ -23,7 +23,7 @@
 - [Error handling](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/08-ErrorHandling.md)
 - [Assignments: Python basics assignments](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/PythonBasicsAssignments.md)
 
-## 02: Data Manipulation and Analysis
+## 02: Data Manipulation, Analysis and Visualization
 **Data Manipulation with Pandas**
 - Introduction to Pandas and its data structures (Series, DataFrame)
 - Data manipulation (filtering, sorting, grouping)
@@ -33,13 +33,30 @@
 - Merging and joining DataFrames
 
 **Numerical Computations with NumPy**
-- Introduction to NumPy arrays and mathematical operations
-- Array operations (slicing, indexing, etc.)
-- Array manipulation (reshaping, stacking, splitting)
-- Working with random numbers
-- Linear algebra operations
 
-**Assignment:** Ass2
+- Introduction to Data Analysis
+- Setting Up Jupyter Notebook and Pandas
+- Data Manipulation with Pandas
+  - Introduction to Pandas
+  - Basics statistics in data analysis (descriptive statistics, shape of distribution, inferential statistics)
+  - Pandas Series
+  - Pandas DataFrame
+  - Reading and writing data with Pandas
+  - Accessing and selecting data
+  - Data manipulation
+  - Data Cleaning
+  - Merge, Join and Concatenating
+- Numerical computations with NumPy
+  - NumPy array operations (slicing, indexing)
+  - NumPy array manipulation
+  - Working with random numbers in NumPy
+  - Analyzing sales data with NumPy
+- Data visualization basics
+  - Line plot, Scatter plot, and Bar plot
+  - Histogram, Box plot, and Violin plot
+- **Assignment 1 :** Analyzing E-commerce Orders using Pandas
+- **Assignment 2 :** Exploratory Data Analysis (EDA) using Pandas, NumPy, and Matplotlib
+
 
 ## 03: Data Visualization
 **Data Visualization with Matplotlib and Seaborn**
