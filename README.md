@@ -46,7 +46,7 @@
   - [Histogram, Box plot, and Violin plot](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/19-Histograms-BoxPlots-ViolinPlots.md)
   
 - [**Assignment 1 :** Analyzing E-commerce Orders using Pandas](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/PythonDataAnalysisAssignments.md)
-- [**Assignment 2 :** Exploratory Data Analysis (EDA) using Pandas, NumPy, and Matplotlib](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/PythonDataAnalysisAssignments.md)
+- [**Assignment 2 :** Exploratory Data Analysis (EDA) using Pandas, NumPy, and Matplotlib](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/PythonDataAnalysisAssignments.md#exploratory-data-analysis-eda-using-pandas-numpy-and-matplotlib)
 
 
 ## 03: Data Visualization
