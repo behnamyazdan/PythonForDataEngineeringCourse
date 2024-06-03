@@ -22,7 +22,6 @@
   - [Modules](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/07-03-Modules.md)
 - [Error handling](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/08-ErrorHandling.md)
 - [Assignments: Python basics assignments](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/PythonBasicsAssignments.md)
-
 ## 02: Data Manipulation, Analysis and Visualization
 - [Introduction to Data Analysis](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/01-IntroductopnToDataAnalysis.md)
 - [Setting Up Jupyter Notebook and Pandas](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/02-SettingUpJupyterNotebookandPandas.md)
@@ -44,7 +43,6 @@
 - [Data visualization Basics](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/17-DataVisualizationBasics.md)
   - [Line plot, Scatter plot, and Bar plot](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/18-LinePlots-ScatterPlots-Bar%20Plots.md)
   - [Histogram, Box plot, and Violin plot](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/19-Histograms-BoxPlots-ViolinPlots.md)
-  
 - [**Assignment 1 :** Analyzing E-commerce Orders using Pandas](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/PythonDataAnalysisAssignments.md)
 - [**Assignment 2 :** Exploratory Data Analysis (EDA) using Pandas, NumPy, and Matplotlib](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/PythonDataAnalysisAssignments.md#exploratory-data-analysis-eda-using-pandas-numpy-and-matplotlib)
 
