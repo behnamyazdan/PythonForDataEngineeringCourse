@@ -156,3 +156,10 @@ The objective of this assignment is to perform an exploratory data analysis (EDA
 - **Code Quality:** Code is clean, well-documented, and follows best practices.
 - **Visualizations:** Plots are clear, well-labeled, and provide meaningful insights.
 - **Analysis:** Answers to exploratory questions are thorough and demonstrate a good understanding of the data.
+
+---
+
+### Sample EDA projects in Kaggle:
+https://www.kaggle.com/code/imoore/intro-to-exploratory-data-analysis-eda-in-python
+https://www.kaggle.com/code/spscientist/a-simple-tutorial-on-exploratory-data-analysis
+https://www.kaggle.com/code/ekami66/detailed-exploratory-data-analysis-with-python
