@@ -51,9 +51,11 @@
   - NumPy array manipulation
   - Working with random numbers in NumPy
   - Analyzing sales data with NumPy
-- Data visualization basics
+- Data visualization Basics
   - Line plot, Scatter plot, and Bar plot
   - Histogram, Box plot, and Violin plot
+  
+
 - **Assignment 1 :** Analyzing E-commerce Orders using Pandas
 - **Assignment 2 :** Exploratory Data Analysis (EDA) using Pandas, NumPy, and Matplotlib
 
