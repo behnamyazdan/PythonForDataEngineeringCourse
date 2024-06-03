@@ -48,18 +48,9 @@
 - [**Assignment 1 :** Analyzing E-commerce Orders using Pandas](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/PythonDataAnalysisAssignments.md)
 - [**Assignment 2 :** Exploratory Data Analysis (EDA) using Pandas, NumPy, and Matplotlib](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/PythonDataAnalysisAssignments.md#exploratory-data-analysis-eda-using-pandas-numpy-and-matplotlib)
 
-
-## 03: Data Visualization
-**Data Visualization with Matplotlib and Seaborn**
-- Data visualization basics
-- Line plots, scatter plots, bar plots
-- Histograms, box plots, violin plots
-- Customizing plots and adding labels, titles, etc.
-
-**Assignment:** Ass3
-
 ## 04: Web Scraping & APIs
 **Web Crawling with Requests, BeautifulSoup and Selenium**
+
 - Introduction to APIs
 - Accessing data from APIs
 - Introduction to web scraping
