@@ -11,7 +11,7 @@ HTTP (Hypertext Transfer Protocol) is the foundation of data communication on th
    - The client (usually a web browser or a web scraping script) sends a request to the server.
    - The server processes the request and sends back a response.
 
-   <img src="D:\LearninProjects\PythonForDataEngineering\_assets\http_connection.gif">
+   <img src="../_assets/http_connection.gif">
 
 2. **HTTP Methods:**
 
