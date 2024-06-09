@@ -1,37 +1,14 @@
-# Web Scraping and APIs
-
-#### Introduction to Web Scraping and APIs
-- **Introduction to Web Scraping**
-  - Definition and applications of web scraping.
-  - Legal and ethical considerations in web scraping.
-  - Overview of tools and libraries for web scraping.
-
-- **Introduction to APIs**
-  - What are APIs and how they work.
-  - Difference between web scraping and using APIs.
-  - Types of APIs: REST, SOAP, GraphQL.
-
-#### Basics of HTML, CSS, and JavaScript
-- **Understanding HTML Structure**
-  - HTML elements and attributes.
-  - Using browser developer tools to inspect HTML.
-
-- **Introduction to CSS**
-  - CSS basics: selectors, properties, and values.
-  - How CSS affects web scraping.
-
-- **Introduction to JavaScript**
-  - Basics of JavaScript: syntax, variables, and functions.
-  - JavaScript's role in web pages and its impact on scraping.
-
-#### Getting Started with Web Scraping Using Python
-- **Setting Up the Environment**
-  - Installing Python and necessary libraries (BeautifulSoup, Requests).
-  - Basic usage of the Requests library to fetch web pages.
-
-- **Parsing HTML with BeautifulSoup**
-  - Basic syntax and methods of BeautifulSoup.
-  - Extracting data from HTML: tags, attributes, and text.
+# 04: Web Scraping and APIs
+- Introduction to Web Scraping and APIs
+- Basics of HTML, CSS, and JavaScript
+  - Introduction to HTML
+  - Introduction to CSS
+  - Introduction to JavaScript
+- Getting Started with Web Scraping Using Python
+  - HTTP Requests
+  - HTTP Response
+  - Fetch Web Pages Using Requests Library
+  - Parsing HTML with BeautifulSoup
 
 #### Advanced Web Scraping Techniques
 - **Handling Pagination and Dynamic Content**
