@@ -46,17 +46,28 @@
 - [**Assignment 2 :** Exploratory Data Analysis (EDA) using Pandas, NumPy, and Matplotlib](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/PythonDataAnalysisAssignments.md#exploratory-data-analysis-eda-using-pandas-numpy-and-matplotlib)
 
 ## 04: Web Scraping & APIs
-**Web Crawling with Requests, BeautifulSoup and Selenium**
+- Introduction to Web Scraping and APIs
+- Basics of HTML, CSS, and JavaScript
+  - Introduction to HTML
+  - Introduction to CSS
+  - Introduction to JavaScript
+- Getting Started with Web Scraping Using Python
+  - HTTP Requests
+  - HTTP Response
+  - Fetch Web Pages Using Requests Library
+  - Parsing HTML with BeautifulSoup
 
-- Introduction to APIs
-- Accessing data from APIs
-- Introduction to web scraping
-- Working with HTML structure
-- Scraping data from websites using BeautifulSoup
-- Handling dynamic content with Selenium (JavaScript rendering)
-- Parsing data from web pages
+- Handling Pagination and Dynamic Content
+  - Techniques for scraping multiple pages.
+  - Dealing with infinite scroll and load-more buttons.
 
-**Assignment:** Ass4
+- Working with APIs
+
+  - Using the Requests library to make API calls.
+
+  - Error handling and status codes.
+
+**Assignment 1:** Scraping Jobinja website, fetch last year jobs information and save into a CSV file.
 
 
 ## 05: Object-Oriented Programming
