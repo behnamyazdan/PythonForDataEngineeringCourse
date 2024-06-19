@@ -15,7 +15,5 @@
   - Dealing with infinite scroll and load-more buttons.
 
 - Working with APIs
-
   - Using the Requests library to make API calls.
-
   - Error handling and status codes.
