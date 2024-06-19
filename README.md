@@ -60,7 +60,7 @@
 - [Working with APIs](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/04-WebScrapingAndAPIs/11-WorkingWithAPI.md)
   - [Handling API Response](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/04-WebScrapingAndAPIs/12-HandlingAPIResponse.md)
   - https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/04-WebScrapingAndAPIs/13-ErrorHandlingAndStatusCode.md
-**Assignment 1:** Scraping Jobinja website, fetch last year jobs information and save into a CSV file.
+  - [**Assignment 1:** Scraping Jobinja website, fetch last year jobs information and save into a CSV file.](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/04-WebScrapingAndAPIs/14-WebScrapingAssignment.md)
 
 
 ## 05: Object-Oriented Programming
