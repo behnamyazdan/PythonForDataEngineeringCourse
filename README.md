@@ -62,22 +62,25 @@
   - [Error Handling and Status Codes](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/04-WebScrapingAndAPIs/13-ErrorHandlingAndStatusCode.md)
 - [**Assignment 1:** Scraping Jobinja website, fetch last year jobs information and save into a CSV file.](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/04-WebScrapingAndAPIs/14-WebScrapingAssignment.md)
 
+## 05: Working with Data Sources, Storages, and Serialization
+- [Introduction](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/01-IntroductionToIO.md) 
+  - [Common File Formats](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/01-IntroductionToIO.md#common-file-formats-and-their-uses)
+- [Importance of File I/O (Input/Output)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/02-ImportanceOfFileInputAndOutput.md)
+- [Basic Concepts of File I/O](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/03-BasicConceptsOfFileIO.md)
+  - [File Paths and Directories](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/04-FilePathsAndDirectories.md)
+  - [Opening and Closing Files](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/05-OpeningAndClosingFiles.md)
+- [Text Files (TXT, CSV) Binary files](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/06-TextFiles.md)
+- JSON (JavaScript Object Notation) Files
+- XML Files
+- Excel Files
+- Binary Files
+- Database File Formats (SQLite)
+- Parquet and pyArrow
 
-## 05: Object-Oriented Programming
+## 06: Object-Oriented Programming
 **Object-Oriented Programming (OOP)**
 - Object-oriented programming concepts (classes, objects, inheritance, polymorphism)
 - Design patterns and best practices in OOP
-
-**Assignment:** Ass5
-
-## 06: Working with Data Sources, Storages, and Serialization
-**Working with Data Sources and Storages, and Serialization**
-- Reading and writing data from/to various file formats
-- Introduction to data serialization formats (JSON, Parquet, Pickle)
-- Serializing and deserializing data objects
-- Best practices for data serialization and storage
-
-**Assignment:** Ass6
 
 ## 07: SQL & NoSQL Databases with Python
 **Working with SQL Databases**
