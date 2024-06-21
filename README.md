@@ -69,7 +69,8 @@
 - [Basic Concepts of File I/O](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/03-BasicConceptsOfFileIO.md)
   - [File Paths and Directories](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/04-FilePathsAndDirectories.md)
   - [Opening and Closing Files](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/05-OpeningAndClosingFiles.md)
-- [Text Files (TXT, CSV) Binary files](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/06-TextFiles.md)
+- [Text Files](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/06-TextFiles.md)
+- [CSV Files](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/07-CsvFiles.md)
 - JSON (JavaScript Object Notation) Files
 - XML Files
 - Excel Files
