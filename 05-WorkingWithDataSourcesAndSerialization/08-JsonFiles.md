@@ -1126,7 +1126,7 @@ Step 1: Define a JSON Schema
 
 First, define a JSON schema that both systems will use to validate and process the data.
 
-{
+```scheme
 "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "User",
   "type": "object",
@@ -1186,7 +1186,9 @@ First, define a JSON schema that both systems will use to validate and process t
     }
   },
   "required": ["id", "name", "contact", "orders"]
-}
+```
+
+
 
 Step 2: Validate JSON data
 
