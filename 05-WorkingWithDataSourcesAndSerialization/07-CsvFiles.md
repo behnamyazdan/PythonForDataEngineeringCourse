@@ -373,12 +373,12 @@ Validating and sanitizing data before processing is crucial to ensure data integ
 
 ### Steps to Validate and Sanitize Data
 
-1. **Check File Format and Structure**
-2. **Validate Data Types**
-3. **Check for Missing Values**
-4. **Sanitize Input Data**
-5. **Handle Edge Cases**
-6. **Log and Handle Errors Gracefully**
+1. Check File Format and Structure
+2. Validate Data Types
+3. Check for Missing Values
+4. Sanitize Input Data
+5. Handle Edge Cases
+6. Log and Handle Errors Gracefully
 
 ### Techniques and Examples
 
@@ -510,4 +510,4 @@ process_csv('example.csv')
 
 Validating and sanitizing data before processing is a critical step in data engineering to ensure data quality, prevent errors, and protect against security vulnerabilities. By implementing checks for file format, data types, missing values, and sanitizing input data, you can robustly handle CSV files and maintain the integrity of your data processing workflows. Proper error handling and logging further enhance the robustness and maintainability of your system.
 
-
+~~~~
