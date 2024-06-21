@@ -8,7 +8,7 @@
   - [Opening and Closing Files](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/05-OpeningAndClosingFiles.md)
 - [Text Files](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/06-TextFiles.md)
 - [CSV Files](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/07-CsvFiles.md)
-- JSON (JavaScript Object Notation) Files
+- [JSON (JavaScript Object Notation) Files](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/08-JsonFiles.md)
 - XML Files
 - Excel Files
 - Binary Files
