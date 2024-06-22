@@ -639,7 +639,6 @@ flat_data = flatten_json(data)
 # Print the flattened JSON data
 for key, value in flat_data.items():
     print(f"{key}: {value}")
-
 ```
 
 **Output:**
@@ -736,7 +735,6 @@ def traverse(data, key_path=''):
         print(f"{key_path}: {data}")
 
 traverse(data)
-
 ```
 
 **Explanation**
@@ -775,8 +773,6 @@ traverse(data)
 ###### 6. Using Libraries for Complex Operations
 
 Leverage libraries such as `pandas` for complex operations like merging, filtering, and aggregating nested JSON data.
-
-
 
 **Example:** Using `pandas` to Flatten and Analyze the Data
 
@@ -929,8 +925,6 @@ except KeyError as e:
 ```
 
 By following these best practices, you can effectively manage and manipulate nested JSON data, ensuring your code is robust, readable, and maintainable. Understanding the structure, handling missing keys gracefully, leveraging recursive functions, and using libraries for complex operations are key strategies in working with nested JSON.
-
-
 
 #### Handling Large JSON Files
 
@@ -1188,8 +1182,6 @@ First, define a JSON schema that both systems will use to validate and process t
   "required": ["id", "name", "contact", "orders"]
 ```
 
-
-
 Step 2: Validate JSON data
 
 use the `jsonschema` library to validate JSON data against the schema before sending it to the frontend.
@@ -1234,6 +1226,4 @@ except ValidationError as e:
 json_data = json.dumps(data)
 
 print(json_data)
-
-
 ```
