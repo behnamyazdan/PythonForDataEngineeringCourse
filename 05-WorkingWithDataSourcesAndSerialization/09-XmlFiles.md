@@ -206,7 +206,6 @@ if root is not None:
             print(f'Missing element: {e}')
         except ValueError as e:
             print(f'Invalid data type: {e}')
-
 ```
 
 ###### Explanation
@@ -472,6 +471,8 @@ In XML documents with namespaces, you need to define the namespaces and use them
 ```
 
 ```python
+from lxml import etree
+
 # Define namespaces
 namespaces = {'bk': 'http://example.com/books'}
 
