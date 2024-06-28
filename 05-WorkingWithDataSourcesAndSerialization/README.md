@@ -11,6 +11,6 @@
 - [JSON (JavaScript Object Notation) Files](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/08-JsonFiles.md)
 - [XML Files](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/09-XmlFiles.md)
 - [Excel Files](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/10-ExcelFiles.md)
-- Binary Files
+- [Binary Files](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/11-BinaryFiles.md)
 - Database File Formats (SQLite)
 - Parquet and pyArrow
