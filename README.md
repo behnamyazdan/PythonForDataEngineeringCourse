@@ -1,6 +1,7 @@
 # Python for Data Engineering Course
 
 ## 01: Python Basics
+
 - [Introduction](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/00-Introductoin.md)
 - [First Python program](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/01-FirstStep.md)
 - [Basic Data types (int, float, str, bool)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/02-DataTypes.md)
@@ -21,7 +22,8 @@
   - [Modules](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/07-03-Modules.md)
 - [Error handling](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/08-ErrorHandling.md)
 - [Assignments: Python basics assignments](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/PythonBasicsAssignments.md)
-## 02: Data Manipulation, Analysis and Visualization
+  
+  ## 02: Data Manipulation, Analysis and Visualization
 - [Introduction to Data Analysis](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/01-IntroductopnToDataAnalysis.md)
 - [Setting Up Jupyter Notebook and Pandas](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/02-SettingUpJupyterNotebookandPandas.md)
 - [Data Manipulation with Pandas](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/03-IntroductionToPandas.md)
@@ -46,6 +48,7 @@
 - [**Assignment 2 :** Exploratory Data Analysis (EDA) using Pandas, NumPy, and Matplotlib](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/PythonDataAnalysisAssignments.md#exploratory-data-analysis-eda-using-pandas-numpy-and-matplotlib)
 
 ## 04: Web Scraping and APIs
+
 - [Introduction to Web Scraping and APIs](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/04-WebScrapingAndAPIs/01-IntroductionToWebScrapingAndAPI.md)
 - [Basics of HTML, CSS, and JavaScript](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/04-WebScrapingAndAPIs/02-IntroductionToHTML.md)
   - [Introduction to HTML](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/04-WebScrapingAndAPIs/02-IntroductionToHTML.md)
@@ -63,6 +66,7 @@
 - [**Assignment 1:** Scraping Jobinja website, fetch last year jobs information and save into a CSV file.](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/04-WebScrapingAndAPIs/14-WebScrapingAssignment.md)
 
 ## 05: Working with Data Sources, Storages, and Serialization
+
 - [Introduction to I/O (Input/Output)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/01-IntroductionToIO.md) 
   - [Common File Formats](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/01-IntroductionToIO.md#common-file-formats-and-their-uses)
 - [Importance of File I/O (Input/Output)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/02-ImportanceOfFileInputAndOutput.md)
@@ -76,15 +80,19 @@
 - [Excel Files](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/10-ExcelFiles.md)
 - [Binary Files](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/11-BinaryFiles.md)
 - [Database File Formats (SQLite)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/12-DatabaseFileFormat(SQLite).md)
-- Parquet and pyArrow
+- [Parquet and pyArrow](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/05-WorkingWithDataSourcesAndSerialization/13-ParquetAndPyArrow.md)
 
 ## 06: Object-Oriented Programming
+
 **Object-Oriented Programming (OOP)**
+
 - Object-oriented programming concepts (classes, objects, inheritance, polymorphism)
 - Design patterns and best practices in OOP
 
 ## 07: SQL & NoSQL Databases with Python
+
 **Working with SQL Databases**
+
 - Introduction to SQL and relational databases
 - SQL basics (SELECT, FROM, WHERE, JOIN)
 - Creating and managing databases, tables, and indexes
@@ -95,6 +103,7 @@
 - Using SQLAlchemy for database interaction
 
 **Working with NoSQL Databases**
+
 - Understanding NoSQL databases (e.g., MongoDB, Redis)
 - Connecting to NoSQL databases
 - Querying and manipulating data in NoSQL databases
@@ -103,7 +112,9 @@
 **Assignment:** Ass7
 
 ## 08: Building Data Pipelines
+
 **Data Pipelines**
+
 - ETL (Extract, Transform, Load)
 - Understanding data pipelines and their components
 - Designing and architecting data pipelines
@@ -111,8 +122,10 @@
 
 **Assignment:** Ass8
 
-##  Capstone Project
+## Capstone Project
+
 **Project Development**
+
 - Apply all the concepts learned in a real-world data engineering project
 - Work with various data sources including web data and APIs
 - Implement ETL pipelines, data processing, and analysis using Python libraries and tools
