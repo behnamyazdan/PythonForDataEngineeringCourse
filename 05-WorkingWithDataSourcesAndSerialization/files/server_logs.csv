@@ -1,0 +1,11 @@
+timestamp,log_level,message
+2020-01-01 00:00:00,INFO,Server started successfully
+2020-01-01 00:01:00,DEBUG,User login request received
+2020-01-01 00:02:00,ERROR,Database connection failed
+2020-01-01 00:03:00,INFO,Request processed in 200ms
+2020-01-01 00:04:00,WARNING,Disk space running low
+2020-01-01 00:05:00,DEBUG,Cache cleared
+2020-01-01 00:06:00,INFO,User logged out
+2020-01-01 00:07:00,ERROR,File not found
+2020-01-01 00:08:00,WARNING,Memory usage high
+2020-01-01 00:09:00,INFO,Backup completed
