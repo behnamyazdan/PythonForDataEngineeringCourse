@@ -1,29 +1,15 @@
 # PlantUML
 
-PlantUML is a powerful tool that allows you to create various types of UML diagrams using simple textual descriptions. Here is an overview of the syntax for different types of UML diagrams:
+PlantUML is a versatile and powerful tool that allows users to create a wide variety of UML diagrams through simple and intuitive textual descriptions. By using a straightforward syntax, PlantUML enables developers, designers, and project managers to easily document and visualize the structure and behavior of their systems without the need for complex and expensive graphical tools. This text-based approach makes it possible to integrate UML diagram creation seamlessly into documentation, code comments, and version control systems, ensuring that diagrams remain up-to-date with the latest changes in the system.
+
+The conversion of PlantUML syntax into an image is straightforward and can be accomplished using various methods and tools. Once the textual description of the diagram is written in the PlantUML syntax, it can be processed by the PlantUML engine to generate a graphical representation. This conversion can be done locally on a user's machine or through online services. Tools such as the PlantUML command line, desktop applications like PlantUML QEditor, and IDE plugins for IntelliJ IDEA, Eclipse, and Visual Studio Code provide seamless ways to convert text to images. Additionally, there are web-based tools like PlantText and PlantUML Online Server that allow users to input their PlantUML code and instantly see the corresponding diagrams.
+
+For those looking to integrate PlantUML into their development workflow, there are several useful tools and extensions available. IDE plugins for popular development environments such as Visual Studio Code, IntelliJ IDEA, and Eclipse enhance productivity by providing real-time diagram previews and syntax highlighting. Command-line tools like the PlantUML jar file can be incorporated into build scripts for automated documentation generation. Web-based tools offer the convenience of generating diagrams without installing any software. Furthermore, platforms like GitLab and GitHub support PlantUML, enabling users to embed and render UML diagrams directly in their repositories' README files or wikis, fostering better collaboration and communication among team members.
+You can use https://www.planttext.com/ to generate diagram from plantuml syntax.
 
 ## Class Diagram
 
 **Syntax:**
-
-```
-@startuml
-class ClassName {
-  +attribute1: Type
-  -attribute2: Type
-  +method1(param1: Type): ReturnType
-  -method2(param2: Type): ReturnType
-}
-
-ClassName1 --> ClassName2: Association
-ClassName1 --|> ClassName3: Inheritance
-ClassName1 ..> ClassName4: Dependency
-ClassName1 o-- ClassName5: Aggregation
-ClassName1 *-- ClassName6: Composition
-@enduml
-```
-
-
 
 ```plantuml
 @startuml
@@ -41,6 +27,8 @@ ClassName1 o-- ClassName5: Aggregation
 ClassName1 *-- ClassName6: Composition
 @enduml
 ```
+
+<img src="../_assets/plantuml_calss_diagram.svg">
 
 **Explanation:**
 
