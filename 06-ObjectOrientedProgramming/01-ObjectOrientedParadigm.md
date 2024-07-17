@@ -51,7 +51,7 @@ Object-oriented development revolves around defining a software system as a coll
 
 Object-oriented techniques encompass a series of stages that include analysis, design, and programming. These stages are interrelated, each building on the previous to create robust, maintainable software. Understanding these stages is crucial for leveraging the full potential of object-oriented methodologies.
 
-<img title="" src="../_assets/object_riented_paradigms.png" alt="" data-align="center">
+<img src="../_assets/object_oriented_paradigms.svg" alt="Object-Oriented Analysis, Design, and Programming" >
 
 ### 1. Object-Oriented Analysis (OOA)
 
