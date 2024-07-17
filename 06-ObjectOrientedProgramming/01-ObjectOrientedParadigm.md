@@ -26,7 +26,7 @@ The 1980s saw the advent of C++, developed by Bjarne Stroustrup, which combined 
 
 The 1990s and 2000s witnessed further advancements with the introduction of languages like Java and C#. Java, developed by Sun Microsystems, emphasized platform independence and robust object-oriented design, becoming a staple in web and enterprise applications. C#, developed by Microsoft, integrated seamlessly with the .NET framework, providing a modern, object-oriented language for Windows-based applications.
 
-<img src="file:///lab/tutorials/PythonForDataEngineeringCourse/_assets/4-Figure2-1.png" title="" alt="" data-align="center">
+<img src="../_assets/4-Figure2-1.png" title="" alt="" data-align="center">
 
 https://programminglanguages.info/language/simula/
 
@@ -212,7 +212,7 @@ In the design phase, we create detailed class diagrams and define the methods' i
 
 Here's a class diagram for the Library Management System example. The diagram shows the relationships between the `Book`, `Member`, and `Library` classes.
 
-<img src="file:///lab/tutorials/PythonForDataEngineeringCourse/_assets/example_library_class_diagram.svg" title="" alt="s" data-align="center">
+<img src="../_assets/example_library_class_diagram.svg" title="" alt="Class Diagram" data-align="center">
 
 #### 3- Object-Oriented Programming
 
