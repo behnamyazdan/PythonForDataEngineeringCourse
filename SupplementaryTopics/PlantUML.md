@@ -56,6 +56,8 @@ ObjectName1 --> ObjectName2: Association
 @enduml
 ```
 
+<img title="" src="../_assets/plantuml_object_diagram.svg" alt="" data-align="center">
+
 **Explanation:**
 
 - Define objects using the `object` keyword.
@@ -81,6 +83,8 @@ UC1 .> UC3 : <<extend>>
 @enduml
 ```
 
+<img title="" src="../_assets/plantuml_usecase_diagram.svg" alt="" data-align="center">
+
 **Explanation:**
 
 - Define actors using the `actor` keyword.
@@ -101,6 +105,8 @@ System -> User: Response
 System -> System: Internal call
 @enduml
 ```
+
+<img title="" src="../_assets/plantuml_sequence_diagram.svg" alt="" data-align="center">
 
 **Explanation:**
 
@@ -126,6 +132,8 @@ stop
 @enduml
 ```
 
+<img title="" src="../_assets/plantuml_activity_diagram.svg" alt="" data-align="center">
+
 **Explanation:**
 
 - Use `start` and `stop` for start and end points.
@@ -143,6 +151,8 @@ State1 --> State2 : Event
 State2 --> [*]
 @enduml
 ```
+
+<img title="" src="../_assets/plantuml_state_diagram.svg" alt="" data-align="center">
 
 **Explanation:**
 
@@ -168,6 +178,8 @@ Component1 --> Component2
 @enduml
 ```
 
+<img title="" src="../_assets/plantuml_component_diagram.svg" alt="" data-align="center">
+
 **Explanation:**
 
 - Use `component` to define components.
@@ -191,6 +203,8 @@ node "Client" {
 Server --> Client
 @enduml
 ```
+
+<img title="" src="../_assets/plantuml_deployment_diagram.svg" alt="" data-align="center">
 
 **Explanation:**
 
