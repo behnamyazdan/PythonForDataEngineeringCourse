@@ -244,7 +244,7 @@ Documentation:
 - **Sequence Diagram**: Illustrates the checkout process.
 - **Use Case Diagram**: Visualizes user interactions with the system.
 
-<img src="file:///lab/learning_projects/PythonForDataEngineering/_assets/bookstore_usecase_diagram.svg" title="" alt="df" data-align="center">
+<img src="../_assets/bookstore_usecase_diagram.svg" title="" alt="df" data-align="center">
 
 ---
 
