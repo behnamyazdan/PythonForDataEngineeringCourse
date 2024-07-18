@@ -58,8 +58,6 @@ OOA also emphasizes modeling relationships and interactions between objects:
 
 4. **Behavioral Modeling**: Define how objects interact to achieve system functionality. For instance, a `Customer` adds items to a `ShoppingCart`, reviews them, and then places an `Order`.
 
-
-
 ## Identifying and Modeling Objects and Relationships
 
 Analyzing a problem to detect and select objects, and determining their relationships in object-oriented analysis (OOA), involves a systematic approach to understanding the requirements of a system and translating them into a structured model. Here’s a step-by-step guide on how to analyze a problem in OOA:
@@ -103,8 +101,6 @@ Analyzing a problem to detect and select objects, and determining their relation
    - Transition from analysis to design by mapping the object model to implementation details.
    - Identify patterns and frameworks that can be leveraged during the design phase.
    - Ensure that the object model provides a solid foundation for the subsequent development phases.
-
-
 
 | Step                                        | Description                                                                                                    | Activities                                                                                                                |
 | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
@@ -246,6 +242,24 @@ Documentation:
 
 <img src="../_assets/bookstore_usecase_diagram.svg" title="" alt="df" data-align="center">
 
+### 7. Prepare for Object-Oriented Design (OOD)
+
+**Objective**: Prepare for transitioning from analysis to design, mapping to implementation details and identifying patterns.
+
+**Activities**:
+
+- Map the conceptual model to implementation details (e.g., database schema).
+- Identify patterns and frameworks to be used (e.g., MVC pattern, Django framework).
+- Ensure a solid foundation for the subsequent development phases.
+
+**Example**:
+
+Preparation:
+
+- Design database schema based on object model (tables for Book, User, Order, etc.).
+- Choose frameworks and tools for implementation (e.g., Django for web development).
+- Plan for code structure and design patterns to be used in development.
+
 ---
 
 ## Example 2: Data Pipeline for E-commerce Analytics
@@ -366,6 +380,8 @@ Documentation:
 - **Sequence Diagram**: Illustrates the data pipeline process.
 - **Use Case Diagram**: Visualizes user interactions with the system.
 
+<img src="../_assets/data_pipeline_usecase_diagram.svg" title="" alt="df" data-align="center">
+
 ### 7. Prepare for Object-Oriented Design (OOD)
 
 **Objective**: Prepare for transitioning from analysis to design, mapping to implementation details and identifying patterns.
@@ -383,8 +399,6 @@ Preparation:
 - Design database schema based on object model (tables for raw data, transformed data, etc.).
 - Choose frameworks and tools for implementation (e.g., Apache Airflow for orchestrating the pipeline).
 - Plan for code structure and design patterns to be used in development.
-
-<img title="" src="../_assets/data_pipeline_usecase_diagram.svg" alt="df" data-align="center">
 
 ---
 
@@ -426,8 +440,6 @@ Behavioral diagrams in UML are used to model the dynamic aspects of a system. Th
 | Use-Case                 | Capture business requirements for the system and illustrate the interaction between the system and its environment              | Analysis         |
 
 **Reference:** Systems Analysis and Design: An Object-Oriented Approach with UML, by: Alan Dennis, Barbara Wixom, David Tegarden
-
-
 
 ### Use Case Diagram
 
@@ -476,5 +488,3 @@ In this diagram:
   - Association between User and Login.
   - Include relationship between Transfer and Login.
   - Generalization relationship between User and Admin (if Admin inherits the functionalities of User).
-
-
