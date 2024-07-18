@@ -237,6 +237,9 @@ Validation:
 Documentation:
 
 - **Class Diagram**: Shows classes (Book, User, Order, etc.) and their relationships.
+
+<img src="../_assets/bookstore_object_model.svg" title="" alt="bookstore object model" data-align="center">
+
 - **Sequence Diagram**: Illustrates the checkout process.
 - **Use Case Diagram**: Visualizes user interactions with the system.
 
