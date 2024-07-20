@@ -23,7 +23,8 @@
 - [Error handling](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/08-ErrorHandling.md)
 - [Assignments: Python basics assignments](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/01-PythonBasics/PythonBasicsAssignments.md)
   
-  ## 02: Data Manipulation, Analysis and Visualization
+## 02: Data Manipulation, Analysis and Visualization
+
 - [Introduction to Data Analysis](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/01-IntroductopnToDataAnalysis.md)
 - [Setting Up Jupyter Notebook and Pandas](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/02-SettingUpJupyterNotebookandPandas.md)
 - [Data Manipulation with Pandas](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/02-DataManipulationAndAnalysis/03-IntroductionToPandas.md)
