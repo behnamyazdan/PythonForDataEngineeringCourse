@@ -4,6 +4,8 @@
 
 In OOP, objects interact with one another through methods, providing a way to model real-world entities and their interactions. This paradigm is characterized by four primary principles: encapsulation, inheritance, abstraction, and polymorphism. By adhering to these principles, OOP helps developers create systems that are modular, reusable, and easier to maintain.
 
+<img src="../_assets/oop_in_python.svg">
+
 Today, OOP is a fundamental paradigm in software development, influencing many programming languages and methodologies. It has become an essential approach for designing scalable and maintainable systems.
 
 ## Importance of OOP for Data Engineers
@@ -406,9 +408,9 @@ In this example:
 | **Protected**       | Members are intended to be used only within the class and its subclasses. The single underscore is a convention and does not enforce access restrictions. | Single underscore prefix (`_`)  | - Use when you want to indicate that a member is part of the internal implementation but might be needed by subclasses. <br> - Internal APIs that subclasses might override or extend. | ```python class MyBaseClass: <br> def __init__(self): <br> self._internal_value = 5 <br> def _internal_method(self): <br> return "Internal" <br> ``` |
 | **Private**         | Members are intended to be used only within the class. Name mangling is used to make the attribute harder to access from outside.                         | Double underscore prefix (`__`) | - Use when you want to hide internal details of the class that should not be accessed or modified from outside. <br> - To prevent accidental modification of internal state.           | ```python class MyClass: <br> def __init__(self): <br> self.__private_value = 20 <br> def __private_method(self): <br> return "Private" <br> ```     |
 
-<div style="text-align: center">
+<p style="text-align: center">
 <img title="" src="../_assets/access_modifire.svg" alt="access modifire" style="zoom: 40%;" data-align="center">
-</div>
+</p>
 
 ##### Public Members
 
