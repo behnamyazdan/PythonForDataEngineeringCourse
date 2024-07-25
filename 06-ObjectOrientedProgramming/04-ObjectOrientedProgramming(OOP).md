@@ -951,7 +951,7 @@ class Person:
 
 While this class is straightforward, each instance consumes memory for the attributes `_name` and `_age`. In large-scale applications, efficient use of attributes and careful design can help minimize memory overhead.
 
-##### 2. Techniques for Minimizing Memory Overhead**
+##### 2. Techniques for Minimizing Memory Overhead
 
 - **Optimize Attribute Storage:**
   
