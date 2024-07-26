@@ -48,8 +48,6 @@ Object-Oriented Programming is particularly significant for data engineers due t
    
    *Example*: A `ConfigManager` class can manage configuration settings, such as database connections and API keys, offering a unified interface for handling these settings across various parts of the application.
 
----
-
 # Python Classes and Objects
 
 In this section, we'll cover the basics of Python classes and objects, focusing on how to define and use them. By the end of this section, you'll understand how to create simple classes, instantiate objects, and interact with them.
@@ -247,8 +245,6 @@ counter2 = Counter()
 # Calling class method
 print(Counter.get_count())  # Output: 2
 ```
-
----
 
 # Object-Oriented Programming Principles in Python
 
@@ -979,3 +975,666 @@ While this class is straightforward, each instance consumes memory for the attri
 - **Avoid Circular References:**
   
   Be mindful of circular references, as they can complicate garbage collection and lead to memory leaks. Use weak references if necessary to avoid these issues.
+
+---
+
+## 2. Inheritance
+
+Inheritance is a fundamental concept in object-oriented programming (OOP) that allows one class to inherit attributes and methods from another class. This mechanism promotes code reuse and establishes a hierarchical relationship between classes.
+
+### What is Inheritance?
+
+Inheritance allows a new class (child or subclass) to inherit the characteristics (attributes and methods) of an existing class (parent or superclass). This concept helps in reusing code and establishing a natural hierarchy between classes.
+
+### Basic Syntax
+
+In Python, inheritance is implemented by defining a new class that inherits from an existing class. The syntax is straightforward:
+
+```python
+class ParentClass:
+    def __init__(self, value):
+        self.value = value
+
+    def show(self):
+        print(f"Value: {self.value}")
+
+class ChildClass(ParentClass):
+    def __init__(self, value, extra):
+        super().__init__(value)
+        self.extra = extra
+
+    def display(self):
+        print(f"Extra: {self.extra}")
+```
+
+In this example:
+
+- `ParentClass` is the parent class with an `__init__` method and a `show` method.
+- `ChildClass` inherits from `ParentClass` and has its own `__init__` and `display` methods.
+
+<img title="" src="../_assets/iinheritance_in_python.svg" alt="inheritance in python" data-align="center">
+
+### Accessing Parent Class Methods
+
+In Python, the `super()` function is a powerful tool used to call methods from a parent class. It provides a way to access and invoke methods that are defined in the parent class from within the child class, and is crucial for maintaining a well-structured inheritance hierarchy. Understanding how to use `super()` effectively is important for implementing clean, maintainable, and extensible object-oriented code.
+
+The `super()` function returns a temporary object of the superclass that allows access to its methods. This function is used in the context of class methods, particularly the `__init__` method, to ensure that the parent class is properly initialized and to call methods defined in the parent class.
+
+**Syntax:**
+
+```python
+super().method_name()
+```
+
+Where `method_name` is the name of the method you want to call from the parent class.
+
+#### Basic Usage of `super()`
+
+The most common use of `super()` is in the `__init__` method of a subclass to initialize its parent class:
+
+```python
+class Parent:
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        print(f"Hello from Parent, {self.name}")
+
+class Child(Parent):
+    def __init__(self, name, age):
+        super().__init__(name)  # Calling the parent class's __init__ method
+        self.age = age
+
+    def introduce(self):
+        super().greet()  # Calling the parent class's greet method
+        print(f"I am {self.age} years old")
+
+child = Child("Alice", 10)
+child.introduce()
+# Output:
+# Hello from Parent, Alice
+# I am 10 years old
+```
+
+In this example:
+
+- `super().__init__(name)` initializes the `Parent` class with the `name` attribute.
+- `super().greet()` calls the `greet` method from the `Parent` class within the `introduce` method of the `Child` class.
+
+#### Common Pitfalls with `super()`
+
+1. **Forgetting to Call `super()`**: In some cases, failing to call `super()` can lead to issues, especially if the parent class requires initialization.
+2. **Incorrect MRO**: In complex inheritance hierarchies, understanding the MRO is essential to ensure that `super()` calls are resolved correctly.
+3. **Compatibility with Old-Style Classes**: While Python 3 supports new-style classes, `super()` does not work with old-style classes, so ensure your classes are using Python 3's new-style classes.
+
+### Multiple Inheritance in Python
+
+**Multiple inheritance** is a feature in object-oriented programming where a class can inherit attributes and methods from more than one parent class. This allows a class to combine functionalities from multiple sources, promoting code reuse and flexibility. Python supports multiple inheritance, and understanding how it works is crucial for designing complex class hierarchies.
+
+In multiple inheritance, a derived class inherits from two or more base classes. This allows the derived class to access and use the attributes and methods from all its parent classes.
+
+**Example:**
+
+```python
+class Base1:
+    def method1(self):
+        print("Method from Base1")
+
+class Base2:
+    def method2(self):
+        print("Method from Base2")
+
+class Derived(Base1, Base2):
+    def method3(self):
+        print("Method from Derived")
+
+d = Derived()
+d.method1()  # Inherited from Base1
+d.method2()  # Inherited from Base2
+d.method3()  # Defined in Derived
+```
+
+In this example:
+
+- `Derived` class inherits from both `Base1` and `Base2`.
+- It has access to methods from both base classes and can also define its own methods.
+
+<img title="" src="../_assets/mult_inheritance.svg" alt="multi inheritance" data-align="center">
+
+#### Method Resolution Order (MRO)
+
+**Method Resolution Order (MRO)** is a mechanism used by Python to determine the order in which base classes are searched when calling a method or accessing an attribute in a class hierarchy. This mechanism becomes particularly important in multiple inheritance scenarios to resolve ambiguities and ensure a consistent method lookup process.
+
+The MRO specifies the order in which classes are considered when searching for a method or attribute. Python uses the **C3 linearization algorithm** to compute this order, which provides a consistent and predictable way to handle method lookups in complex class hierarchies.
+
+**Key Points:**
+
+- **Linearization**: MRO linearizes the class hierarchy into a single list that reflects the order in which classes are searched.
+- **Consistency**: Ensures that each class appears in the MRO list only once and follows a consistent order of resolution.
+- **Algorithm**: The C3 linearization algorithm is used to compute the MRO, which takes into account the order of base classes and the hierarchy in which they are defined.
+
+##### C3 Linearization Algorithm
+
+The C3 linearization algorithm determines the MRO by merging the MROs of the parent classes with the order in which they are listed. The algorithm is designed to provide a consistent order while respecting the inheritance hierarchy and avoiding ambiguities.
+
+**Steps in C3 Linearization:**
+
+1. **Create a list**: Start with the list of the base classes in the order they are specified in the derived class.
+2. **Merge MROs**: Merge the MROs of the parent classes with the list of the derived class’s parent classes.
+3. **Remove duplicates**: Ensure that each class appears only once in the final MRO list.
+
+**Example:**
+
+```python
+class A:
+    def method(self):
+        print("Method from A")
+
+class B(A):
+    def method(self):
+        print("Method from B")
+
+class C(A):
+    def method(self):
+        print("Method from C")
+
+class D(B, C):
+    pass
+
+print(D.__mro__)
+# Output: (<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)
+```
+
+In this example:
+
+- The MRO for class `D` is `[D, B, C, A, object]`, reflecting the order in which methods are resolved.
+
+##### Using `super()` with MRO
+
+The `super()` function interacts with the MRO to call methods from base classes in the correct order. This function is used to ensure that the method resolution follows the MRO and that each class’s method is called appropriately.
+
+**Example:**
+
+```python
+class A:
+    def __init__(self):
+        print("Initializing A")
+
+class B(A):
+    def __init__(self):
+        super().__init__()
+        print("Initializing B")
+
+class C(A):
+    def __init__(self):
+        super().__init__()
+        print("Initializing C")
+
+class D(B, C):
+    def __init__(self):
+        super().__init__()
+        print("Initializing D")
+
+d = D()
+```
+
+In this example:
+
+- `super()` ensures that the `__init__` methods of `A`, `B`, and `C` are called in the order specified by the MRO, which is `A` → `B` → `C` → `D`.
+
+##### Other Mechanisms Related to MRO
+
+- **`__mro__` Attribute**: Provides the MRO of a class as a tuple. It lists the classes in the order they are considered for method resolution.
+  
+  ```python
+  print(D.__mro__)
+  # Output: (<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)
+  ```
+
+- **`mro()` Method**: Returns the MRO of a class as a list. It is a method of the class type that provides the same information as `__mro__`.
+  
+  ```python
+  print(D.mro())
+  # Output: [<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>]
+  ```
+
+- **Method Resolution**: When a method is called on an instance, Python uses the MRO to find the method definition, starting from the class of the instance and moving through the MRO.
+
+The Method Resolution Order (MRO) is a critical aspect of multiple inheritance in Python, ensuring that methods and attributes are resolved in a consistent and predictable manner. The C3 linearization algorithm is used to compute the MRO, merging parent MROs and maintaining order. The `super()` function interacts with the MRO to provide proper method resolution across the class hierarchy. Understanding MRO and related mechanisms is essential for designing complex class structures and managing inheritance in Python effectively.
+
+#### Multi-level inheritance
+
+Multi-level inheritance is a type of inheritance where a class inherits from a class that is itself derived from another class. This creates a chain of inheritance, forming a hierarchy.
+
+##### How Multi-Level Inheritance Works
+
+In multi-level inheritance, the derived class inherits attributes and methods from its parent class, which in turn inherits from another class. This chain can be extended further if needed.
+
+Here's a basic example to illustrate multi-level inheritance:
+
+```python
+class Grandparent:
+    def __init__(self):
+        print("Grandparent initialized")
+
+    def method_grandparent(self):
+        print("Method from Grandparent")
+
+class Parent(Grandparent):
+    def __init__(self):
+        super().__init__()  # Call to Grandparent's __init__
+        print("Parent initialized")
+
+    def method_parent(self):
+        print("Method from Parent")
+
+class Child(Parent):
+    def __init__(self):
+        super().__init__()  # Call to Parent's __init__
+        print("Child initialized")
+
+    def method_child(self):
+        print("Method from Child")
+
+# Create an instance of Child
+child_instance = Child()
+child_instance.method_grandparent()  # Inherited from Grandparent
+child_instance.method_parent()       # Inherited from Parent
+child_instance.method_child()        # Defined in Child
+```
+
+1. **Grandparent Class**: This is the base class from which all other classes derive.
+2. **Parent Class**: Inherits from `Grandparent` and can access its methods and attributes. It also introduces its own methods.
+3. **Child Class**: Inherits from `Parent`, thus also inheriting the functionality of `Grandparent`. It adds its own methods and can use those inherited from both `Parent` and `Grandparent`.
+
+<img title="" src="../_assets/multilevel_inheritance.svg" alt="multi-level inheritance" data-align="center">
+
+##### Key Points
+
+- **Method Resolution Order (MRO)**: Python uses the C3 linearization algorithm to determine the method resolution order in multi-level inheritance. This ensures a consistent order in which methods are resolved, which is essential when dealing with multiple levels of inheritance.
+
+- **Use of `super()`**: In multi-level inheritance, the `super()` function is used to ensure that methods from parent classes are properly called. It allows for calling methods in the method resolution order.
+
+#### Diamond Problem
+
+The **diamond problem** occurs when two base classes of a derived class have a common ancestor, leading to ambiguity in method resolution. Python’s MRO algorithm is designed to handle this problem by providing a consistent method resolution order.
+
+<img src="../_assets/diamond_problem_1.svg" title="" alt="diamond problem" data-align="center">
+
+**Example:**
+
+```python
+class A:
+    def method(self):
+        print("Method from A")
+
+class B(A):
+    def method(self):
+        print("Method from B")
+
+class C(A):
+    def method(self):
+        print("Method from C")
+
+class D(B, C):
+    pass
+
+d = D()
+d.method()  # Output: Method from B
+```
+
+In this example:
+
+- `D` inherits from both `B` and `C`, which both inherit from `A`.
+- The MRO ensures that the method from `B` is chosen before `C` and `A`.
+
+<img src="../_assets/diamond_problem.svg" title="" alt="diamond problem in python" data-align="center">
+
+#### Using `super()` in Multiple Inheritance
+
+The `super()` function works with multiple inheritance to ensure that all parent classes are correctly initialized and that their methods are called in the proper order.
+
+**Example:**
+
+```python
+class A:
+    def __init__(self):
+        print("Initializing A")
+
+class B(A):
+    def __init__(self):
+        super().__init__()
+        print("Initializing B")
+
+class C(A):
+    def __init__(self):
+        super().__init__()
+        print("Initializing C")
+
+class D(B, C):
+    def __init__(self):
+        super().__init__()
+        print("Initializing D")
+
+d = D()
+```
+
+In this example:
+
+- The `super()` function ensures that `A`'s `__init__` method is called once, even though `D` inherits from both `B` and `C`.
+
+#### Best Practices for Multiple Inheritance
+
+- **Use sparingly**: Multiple inheritance can lead to complex and difficult-to-maintain code. Use it only when it provides a clear benefit.
+- **Prefer composition over inheritance**: In many cases, composition (using objects of other classes) can achieve similar results without the complexity of multiple inheritance.
+- **Be aware of the MRO**: Understand how Python’s MRO works to avoid unintended behavior and ambiguity.
+
+Multiple inheritance in Python allows a class to inherit from multiple base classes, enabling the combination of various functionalities. While it offers significant flexibility, it also introduces complexities such as the diamond problem and requires careful management of the method resolution order. Using `super()` helps handle multiple inheritance scenarios more effectively, ensuring proper initialization and method calls across the class hierarchy.
+
+### Method Overriding
+
+**Method overriding** is a fundamental concept in object-oriented programming (OOP) where a subclass provides a specific implementation of a method that is already defined in its superclass. This allows subclasses to customize or extend the behavior of methods inherited from parent classes. 
+
+When a method in a subclass has the same name, parameters, and return type as a method in its superclass, the subclass method overrides the superclass method. This means that when the method is called on an instance of the subclass, the overridden method in the subclass is executed instead of the method in the superclass.
+
+**Key Points:**
+
+- **Same Signature**: The overriding method must have the same name and signature (parameters) as the method in the superclass.
+- **Accessing Superclass Methods**: The overridden method can call the method in the superclass using `super()`, allowing it to extend or modify its behavior.
+
+#### How Method Overriding Works in Python
+
+In Python, method overriding is implemented by defining a method in the subclass with the same name as the method in the superclass. When the method is called on an instance of the subclass, Python will use the subclass’s method.
+
+**Example:**
+
+```python
+class Animal:
+    def make_sound(self):
+        print("Some generic animal sound")
+
+class Dog(Animal):
+    def make_sound(self):
+        print("Woof!")
+
+# Creating instances
+generic_animal = Animal()
+dog = Dog()
+
+# Calling methods
+generic_animal.make_sound()  # Output: Some generic animal sound
+dog.make_sound()            # Output: Woof!
+```
+
+In this example:
+
+- `Dog` overrides the `make_sound` method of `Animal`. 
+- When `make_sound` is called on an instance of `Dog`, it executes the overridden method in `Dog`, not the method in `Animal`.
+
+#### Accessing Superclass Methods
+
+Sometimes, you may want to call the original method in the superclass from the overridden method to extend or modify its behavior. This can be done using the `super()` function.
+
+**Example:**
+
+```python
+class Animal:
+    def make_sound(self):
+        print("Some generic animal sound")
+
+class Dog(Animal):
+    def make_sound(self):
+        super().make_sound()  # Calling the method in Animal
+        print("Woof!")
+
+# Creating instance
+dog = Dog()
+
+# Calling method
+dog.make_sound()
+# Output:
+# Some generic animal sound
+# Woof!
+```
+
+In this example:
+
+- `super().make_sound()` calls the `make_sound` method in the `Animal` class, and then the `Woof!` message is printed by the `Dog` class.
+
+#### Use Cases for Method Overriding
+
+**1. Customizing Behavior:** Allows subclasses to provide specific behavior different from the superclass.
+**2. Extending Functionality:** Subclasses can add new behavior while reusing the existing functionality of the superclass.
+**3. Polymorphism:** Supports polymorphic behavior where different subclasses provide their own implementations of the same method.
+
+**Example in Data Engineering:**
+
+```python
+class DataProcessor:
+    def process_data(self, data):
+        print("Processing data in the generic way")
+
+class CSVDataProcessor(DataProcessor):
+    def process_data(self, data):
+        super().process_data(data)  # Calling the generic processing
+        print("Processing data in CSV-specific way")
+
+# Creating instance
+csv_processor = CSVDataProcessor()
+
+# Calling method
+csv_processor.process_data("data.csv")
+# Output:
+# Processing data in the generic way
+# Processing data in CSV-specific way
+```
+
+In this example:
+
+- `CSVDataProcessor` overrides the `process_data` method to include CSV-specific processing, while also calling the generic processing logic from the `DataProcessor` class.
+
+#### Best Practices for Method Overriding
+
+- **Maintain Consistency:** Ensure that the overridden method has the same signature as the method in the superclass to avoid confusion.
+- **Document Overrides:** Clearly document why and how the method is overridden to maintain code readability.
+- **Use `super()` Wisely:** Use `super()` to extend the functionality of the superclass method rather than completely replacing it, when applicable.
+- **Consider `@Override` Decorator:** Python does not have a built-in `@Override` decorator like Java, but you can use comments or custom decorators to indicate overridden methods for clarity.
+
+Method overriding is a powerful feature in Python that allows subclasses to provide specific implementations of methods defined in their superclasses. By overriding methods, you can customize behavior, extend functionality, and achieve polymorphic behavior. Understanding how to properly use and manage method overriding is crucial for effective object-oriented design and coding in Python.
+
+### Example
+
+```python
+# Base class for single inheritance
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f"{self.name} makes a sound")
+
+# Derived class demonstrating single inheritance
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)  # Call constructor of base class
+        self.breed = breed
+
+    def speak(self):
+        print(f"{self.name} barks")
+
+    def display_info(self):
+        print(f"Name: {self.name}, Breed: {self.breed}")
+
+# Another base class for multiple inheritance
+class Swimmer:
+    def swim(self):
+        print("I can swim")
+
+# Multiple inheritance example
+class Dolphin(Dog, Swimmer):
+    def __init__(self, name, breed, is_wild):
+        super().__init__(name, breed)  # Initialize from Dog
+        self.is_wild = is_wild
+
+    def speak(self):
+        super().speak()  # Call speak method from Dog
+        print("Dolphin clicks")
+
+    def display_info(self):
+        super().display_info()  # Call display_info from Dog
+        print(f"Is wild: {self.is_wild}")
+
+# Base class for multi-level inheritance
+class Vehicle:
+    def __init__(self, brand):
+        self.brand = brand
+
+    def display(self):
+        print(f"Brand: {self.brand}")
+
+# Intermediate class in multi-level inheritance
+class Car(Vehicle):
+    def __init__(self, brand, model):
+        super().__init__(brand)
+        self.model = model
+
+    def display(self):
+        super().display()
+        print(f"Model: {self.model}")
+
+# Derived class in multi-level inheritance
+class SportsCar(Car):
+    def __init__(self, brand, model, top_speed):
+        super().__init__(brand, model)
+        self.top_speed = top_speed
+
+    def display(self):
+        super().display()
+        print(f"Top Speed: {self.top_speed} km/h")
+
+# Example usage
+if __name__ == "__main__":
+    # Single inheritance example
+    my_dog = Dog("Rex", "German Shepherd")
+    my_dog.speak()          # Output: Rex barks
+    my_dog.display_info()  # Output: Name: Rex, Breed: German Shepherd
+
+    # Multiple inheritance example
+    my_dolphin = Dolphin("Flipper", "Bottlenose", True)
+    my_dolphin.speak()      # Output: Flipper barks
+                            #         Dolphin clicks
+    my_dolphin.display_info()  # Output: Name: Flipper, Breed: Bottlenose
+                               #         Is wild: True
+
+    # Multi-level inheritance example
+    my_sports_car = SportsCar("Ferrari", "488", 330)
+    my_sports_car.display()  # Output: Brand: Ferrari
+                              #         Model: 488
+                              #         Top Speed: 330 km/h
+```
+
+#### Comments on the Code:
+
+- **Single Inheritance**: `Dog` class inherits from `Animal`, demonstrating method overriding and calling base class methods using `super()`.
+
+- **Multiple Inheritance**: `Dolphin` class inherits from both `Dog` and `Swimmer`, illustrating how `super()` is used to manage multiple base classes and method resolution.
+
+- **Multi-Level Inheritance**: `SportsCar` class inherits from `Car`, which in turn inherits from `Vehicle`, showing how to extend functionality across multiple levels of inheritance.
+
+<img src="../_assets/python_inheritance_example.svg" title="" alt="inheritance in python" data-align="center">
+
+### Inheritance in data pipelines
+
+Inheritance in data pipelines allows for the creation of flexible and reusable components, which is crucial in designing robust and scalable data engineering solutions. Here’s an example demonstrating how inheritance can be applied to a data pipeline system for a data engineer:
+
+#### Example: Basic Data Pipeline Framework with Inheritance
+
+In this example, we will design a simple data pipeline framework using inheritance. The framework will have base and derived classes for different stages of the pipeline: data extraction, transformation, and loading.
+
+```python
+# Base class for a pipeline component
+class PipelineComponent:
+    def __init__(self, name):
+        self.name = name
+
+    def process(self, data):
+        # Base class implementation (does nothing)
+        return data
+
+    def __str__(self):
+        return f"{self.__class__.__name__} - {self.name}"
+
+# Derived class for data extraction
+class DataExtractor(PipelineComponent):
+    def __init__(self, name, source):
+        super().__init__(name)
+        self.source = source
+
+    def process(self, data):
+        # Simulate data extraction from a source
+        print(f"Extracting data from {self.source}")
+        return data  # For simplicity, we're returning the same data
+
+# Derived class for data transformation
+class DataTransformer(PipelineComponent):
+    def __init__(self, name, transformation_rule):
+        super().__init__(name)
+        self.transformation_rule = transformation_rule
+
+    def process(self, data):
+        # Simulate data transformation
+        print(f"Transforming data using rule: {self.transformation_rule}")
+        return [self.transformation_rule(item) for item in data]
+
+# Derived class for data loading
+class DataLoader(PipelineComponent):
+    def __init__(self, name, destination):
+        super().__init__(name)
+        self.destination = destination
+
+    def process(self, data):
+        # Simulate data loading into a destination
+        print(f"Loading data to {self.destination}")
+        # Assume the data is loaded successfully
+        return data
+
+# Example usage
+if __name__ == "__main__":
+    # Create instances of each pipeline component
+    extractor = DataExtractor(name="Extractor1", source="Database")
+    transformer = DataTransformer(name="Transformer1", transformation_rule=lambda x: x.upper())
+    loader = DataLoader(name="Loader1", destination="Data Warehouse")
+
+    # Simulate a pipeline execution
+    data = ["data1", "data2", "data3"]
+    print("Pipeline Execution:")
+    data = extractor.process(data)
+    data = transformer.process(data)
+    loader.process(data)
+```
+
+### Explanation:
+
+- **PipelineComponent**: This is the base class for all pipeline components. It includes a `process()` method that is meant to be overridden by derived classes. In this simplified version, `process()` in the base class does nothing and simply returns the data.
+
+- **DataExtractor**: Inherits from `PipelineComponent`. Implements the `process()` method to simulate data extraction from a source. It demonstrates how you can extend functionality in derived classes.
+
+- **DataTransformer**: Inherits from `PipelineComponent`. Implements the `process()` method to transform data using a specified transformation rule. It shows how to add specific behavior to a component.
+
+- **DataLoader**: Inherits from `PipelineComponent`. Implements the `process()` method to simulate loading data into a destination. It illustrates how to handle data loading in the pipeline.
+
+<img src="../_assets/inheritance_in_datapipelines_example.svg" title="" alt="" data-align="center">
+
+### Benefits of Using Inheritance in This Example:
+
+1. **Code Reusability**: Common functionality (e.g., initialization and basic processing) is handled in the base class, avoiding code duplication in derived classes.
+
+2. **Flexibility**: New stages or components can be easily added by creating new classes that inherit from the `PipelineComponent` base class.
+
+3. **Maintainability**: By centralizing common logic in the base class, it becomes easier to update and maintain the code.
+
+4. **Clarity**: Using inheritance makes it clear that different pipeline components share common functionality while providing their own specific behavior.
+
+This example illustrates how inheritance can be used to create a simple yet flexible data pipeline system, making it easier for data engineers to build and manage data processing workflows.
+
+---
