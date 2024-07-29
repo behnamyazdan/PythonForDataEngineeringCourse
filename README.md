@@ -147,7 +147,7 @@
     - [Encapsulation vs Inheritance vs Abstraction vs Polymorphism](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/04-ObjectOrientedProgramming(OOP).md#encapsulation-vs-inheritance-vs-abstraction-vs-polymorphism)
     - [Dunder Methods](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/04-ObjectOrientedProgramming(OOP).md#dunder-methods)
     - [Class Relationships](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/04-ObjectOrientedProgramming(OOP).md#class-relationships)
-- [OOP Design Principles](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/06-Object-OrientedDesignPrinciples.md#oop-design-principles)
+- [Object-Oriented Design Principles](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/06-Object-OrientedDesignPrinciples.md#oop-design-principles)
   - [SOLID principles](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/06-Object-OrientedDesignPrinciples.md#solid-principles)
   - [DRY (Don't Repeat Yourself)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/06-Object-OrientedDesignPrinciples.md#dry-dont-repeat-yourself)
   - [KISS (Keep It Simple, Stupid)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/06-Object-OrientedDesignPrinciples.md#kiss-keep-it-simple-stupid)
