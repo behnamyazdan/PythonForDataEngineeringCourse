@@ -2510,15 +2510,14 @@ if __name__ == "__main__":
 
 This code showcases how OOP principles such as abstraction, encapsulation, inheritance, and polymorphism are used in a real-world data pipeline scenario.
 
-----
 
 
+## Dunder Methods
 
-## Overview of Dunder Methods
-
-Dunder methods, also known as magic methods or special methods, are a set of predefined methods in Python that allow you to define the behavior of your objects in built-in operations. They are named with double underscores before and after their names (e.g., `__init__`, `__str__`, `__add__`).
+Dunder methods, also known as **magic methods** or special methods, are a set of predefined methods in Python that allow you to define the behavior of your objects in built-in operations. They are named with double underscores before and after their names (e.g., `__init__`, `__str__`, `__add__`).
 
 1. **`__init__`**: 
+   
    - **Purpose**: Called when an instance of the class is created.
    - **Usage**: Initialize instance attributes.
    - **Example**: 
@@ -2528,7 +2527,7 @@ Dunder methods, also known as magic methods or special methods, are a set of pre
              self.name = name
              self.age = age
      ```
-
+   
 2. **`__str__`**:
    - **Purpose**: Defines the string representation of the object, used by `print()` and `str()`.
    - **Usage**: Provide a user-friendly string representation.
@@ -2651,7 +2650,7 @@ Dunder methods, also known as magic methods or special methods, are a set of pre
              self.file.close()
      ```
 
-### Applications and Use Cases
+**Applications and Use Cases:**
 
 - **Custom Data Structures**: Implement indexing, length, and item management in custom collections.
 - **Operator Overloading**: Define how custom objects respond to arithmetic and comparison operators.
@@ -2659,3 +2658,145 @@ Dunder methods, also known as magic methods or special methods, are a set of pre
 - **Callable Objects**: Create objects that can be used as functions, useful for creating flexible and reusable code.
 
 Dunder methods allow you to make your classes interact seamlessly with Python's built-in functions and operations, providing a powerful way to extend and customize behavior in your applications.
+
+## Class Relationships
+
+In object-oriented programming (OOP), understanding the relationships between classes is crucial for designing effective and maintainable systems. The primary relationships include **inheritance**, **composition**, **aggregation**, and **association**. Each of these relationships has distinct characteristics and serves different purposes in object-oriented design.
+
+### 1. Inheritance
+
+Inheritance is a fundamental concept where a class (subclass) inherits attributes and methods from another class (superclass). This relationship is known as the **"IS-A"** relationship.
+
+**IS-A Relationship**:
+
+**Definition**: The subclass is a specific type of the superclass. For instance, if you have a `Vehicle` class, and `Car` inherits from `Vehicle`, then **a `Car` "IS-A" `Vehicle`.**
+
+**Example**:
+
+```python
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):
+    def bark(self):
+        print("Dog barks")
+
+# Usage
+dog = Dog()
+dog.speak()  # Animal speaks
+dog.bark()   # Dog barks
+```
+
+- **Benefits**: Code reusability, polymorphism, and a clear hierarchical structure.
+
+### 2. Association
+
+Association represents a general relationship between classes where one class uses or interacts with another. This can be a **one-to-one**, **one-to-many**, or **many-to-many** relationship.
+
+**Association**:
+
+**Definition**: Describes a relationship where classes collaborate but do not necessarily have a strong ownership. For instance, a `Customer` class might associate with an `Order` class.
+
+**Example**:
+
+```python
+class Order:
+    def __init__(self, order_id):
+        self.order_id = order_id
+
+class Customer:
+    def __init__(self, name):
+        self.name = name
+        self.orders = []
+
+    def place_order(self, order):
+        self.orders.append(order)
+
+# Usage
+customer = Customer("Alice")
+order1 = Order("001")
+customer.place_order(order1)
+```
+
+- **Benefits**: Provides flexibility in relationships, allows objects to interact without strong dependencies.
+
+Each relationship type in OOP—inheritance, composition, aggregation, and association—plays a crucial role in defining how classes interact and depend on one another. Understanding these relationships helps in designing robust and maintainable systems:
+
+- **Inheritance** (IS-A): Establishes a hierarchical relationship where one class is a specialized version of another.
+- **Composition** (HAS-A): Models a part-whole relationship with strong coupling.
+- **Aggregation** (HAS-A): Represents a weaker coupling than composition, indicating a more flexible part-whole relationship.
+- **Association**: Describes general interactions between classes with varying degrees of dependency.
+
+These relationships provide different ways to model real-world interactions and dependencies, enabling more organized and scalable code.
+
+### 3. Composition
+
+Composition describes a **"HAS-A"** relationship where a class contains objects of other classes. It models a **part-whole relationship**, where one class is composed of one or more classes.
+
+**HAS-A Relationship**:
+
+**Definition**: The class contains instances of other classes as attributes. For example, a `Library` class might **"HAS-A"** collection of `Book` objects.
+
+**Example**:
+
+```python
+class Book:
+    def __init__(self, title):
+        self.title = title
+
+class Library:
+    def __init__(self):
+        self.books = []
+
+    def add_book(self, book):
+        self.books.append(book)
+
+# Usage
+library = Library()
+book1 = Book("Python Programming")
+library.add_book(book1)
+```
+
+- **Benefits**: Promotes modularity and flexibility, allows changes in one component without affecting others.
+
+### 4. Aggregation
+
+Aggregation is a special type of association that represents a "**HAS-A**" relationship but with weaker coupling than composition. It implies that the contained object can exist independently of the container.
+
+**Aggregation**:
+
+**Definition**: The relationship is more loosely bound compared to composition. For example, a `Department` class might have an aggregation relationship with a `Professor` class, where a professor can exist independently of the department.
+
+**Example**:
+
+```python
+class Professor:
+    def __init__(self, name):
+        self.name = name
+
+class Department:
+    def __init__(self):
+        self.professors = []
+
+    def add_professor(self, professor):
+        self.professors.append(professor)
+
+# Usage
+department = Department()
+prof1 = Professor("Dr. Smith")
+department.add_professor(prof1)
+```
+
+- **Benefits**: Provides flexibility, as the relationship is not as tightly coupled as in composition.
+
+
+
+<img src="../_assets/aggregation_association_composition.png" style="zoom:50%;" />
+
+Association, aggregation, and composition are fundamental concepts in object-oriented design that describe different types of relationships between classes. **Association** is a broad term used to represent any connection between objects of different classes. It signifies a general relationship and does not imply a strict connection between the lifecycles of the associated objects. For example, a `Customer` may be associated with an `Order`, indicating that a customer can place orders without the objects being tightly coupled in terms of their existence.
+
+In contrast, **aggregation** and **composition** are more specific types of association that define stronger relationships with particular implications for the objects' lifecycles. **Aggregation** denotes a "whole-part" relationship where the part can exist independently of the whole. For instance, a `Department` might contain `Professor` objects, where professors can exist outside the department. **Composition**, however, represents a more rigid "whole-part" relationship where the existence of the parts is dependent on the whole. If the whole object is destroyed, the parts are also destroyed. For example, in a `Library`-`Book` relationship, books are considered part of the library and do not exist outside its context. In summary, while aggregation allows for more independent existence of parts, composition ensures a tighter, more dependent relationship between the whole and its parts. The key difference between these relationships is that composition and aggregation are specific forms of association, each defining the strength and nature of the relationship between objects.
+
+https://algodaily.com/lessons/association-aggregation-composition-casting
+
