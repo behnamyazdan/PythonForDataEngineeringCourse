@@ -91,14 +91,12 @@
   - [Understanding Object-Oriented Development](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/01-ObjectOrientedParadigm.md#understanding-object-oriented-development)
   - [Object-Oriented Analysis, Design, and Programming](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/01-ObjectOrientedParadigm.md#object-oriented-analysis-design-and-programming)
   - [Fundamental Principles of Object-Oriented Paradigms](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/01-ObjectOrientedParadigm.md#fundamental-principles-of-object-oriented-paradigms)
-
 - [Object-OrientedAnalysis(OOA)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/02-Object-OrientedAnalysis(OOA).md)
   - [Software Modeling Techniques](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/02-Object-OrientedAnalysis(OOA).md#software-modeling-techniques)
   - [Object-Oriented Analysis (OOA)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/02-Object-OrientedAnalysis(OOA).md#object-oriented-analysis-ooa)
   - [UML Diagrams](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/02-Object-OrientedAnalysis(OOA).md#uml-diagrams)
     - [UML Diagrams in Different Phases of Software Development](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/02-Object-OrientedAnalysis(OOA).md#uml-diagrams-in-different-phases-of-software-development)
     - [Use Case Diagram](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/02-Object-OrientedAnalysis(OOA).md#use-case-diagram)
-
 - [Object-Oriented Design (OOD)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/03-ObjectOrientedDesign(OOD).md#object-oriented-design-ood)
   - [Core Concepts of OOD](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/03-ObjectOrientedDesign(OOD).md#core-concepts-of-ood)
   - [Fundamental Principles of OOD](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/03-ObjectOrientedDesign(OOD).md#fundamental-principles-of-ood)
@@ -113,8 +111,6 @@
   - [Controlling Events and Boundary Conditions](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/03-ObjectOrientedDesign(OOD).md#controlling-events-and-boundary-conditions)
   - [Documentation and Communication](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/03-ObjectOrientedDesign(OOD).md#documentation-and-communication)
   - [Introduction to Design Patterns](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/03-ObjectOrientedDesign(OOD).md#introduction-to-design-patterns)
-
-
 - [Introduction to Object-Oriented Programming (OOP)](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/04-ObjectOrientedProgramming(OOP).md#introduction-to-oop-in-python)
   - [Python Classes and Objects](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/04-ObjectOrientedProgramming(OOP).md#python-classes-and-objects)
   - [Object-Oriented Programming Principles in Python](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/04-ObjectOrientedProgramming(OOP).md#object-oriented-programming-principles-in-python)
@@ -151,7 +147,6 @@
     - [Encapsulation vs Inheritance vs Abstraction vs Polymorphism](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/04-ObjectOrientedProgramming(OOP).md#encapsulation-vs-inheritance-vs-abstraction-vs-polymorphism)
     - [Dunder Methods](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/04-ObjectOrientedProgramming(OOP).md#dunder-methods)
     - [Class Relationships](https://github.com/behnamyazdan/PythonForDataEngineeringCourse/blob/main/06-ObjectOrientedProgramming/04-ObjectOrientedProgramming(OOP).md#class-relationships)
-
 
 ## 07: SQL & NoSQL Databases with Python
 
