@@ -1931,3 +1931,731 @@ class File(Readable, Writable):
 - This approach is useful when you need a class to adhere to multiple interfaces or protocols. For instance, in file handling systems, a file might need to support both reading and writing operations. By using abstract base classes, you can define clear contracts for these operations and ensure that any concrete implementation adheres to these contracts.
 
 ---
+
+## 4. Polymorphism in Python
+
+**Polymorphism** is a core concept in object-oriented programming (OOP) that allows objects of different classes to be treated as objects of a common superclass. It enables a single function or method to operate on different types of objects, providing flexibility and reusability in code. This tutorial will guide you through polymorphism in Python, from basic to advanced levels.
+
+Polymorphism is derived from Greek, meaning "**many forms.**" In programming, it refers to the ability to call the same method on different objects and have each of them respond in their own way. It allows you to use a unified interface for different underlying forms (data types).
+
+### Basic Example of Polymorphism
+
+In Python, polymorphism is achieved through **method overriding** and **duck typing**. Here's a simple example to illustrate:
+
+```python
+class Animal:
+    def make_sound(self):
+        raise NotImplementedError("Subclass must implement abstract method")
+
+class Dog(Animal):
+    def make_sound(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def make_sound(self):
+        return "Meow!"
+
+# Function that uses polymorphism
+def animal_sound(animal):
+    print(animal.make_sound())
+
+# Usage
+dog = Dog()
+cat = Cat()
+
+animal_sound(dog)  # Output: Woof!
+animal_sound(cat)  # Output: Meow!
+```
+
+In this example:
+
+- The `Animal` class defines an abstract method `make_sound`.
+- The `Dog` and `Cat` classes override the `make_sound` method with specific implementations.
+- The `animal_sound` function calls `make_sound` on any `Animal` object, demonstrating polymorphism.
+
+### Method Overriding
+
+When a method in a subclass has the same name, same parameters, and same return type as a method in its superclass, it is considered to override the superclass's method. This means that when the method is called on an instance of the subclass, the subclass's version of the method is executed, not the one from the superclass.
+
+**Key Points:**
+
+- The method in the subclass must have the same name as the method in the superclass.
+- It must have the same or compatible parameters.
+- The subclass method can call the superclass method using the `super()` function, if needed, to extend or modify its behavior.
+
+**Benefits of Method Overriding:**
+
+- **Specialization:** Allows subclasses to provide specialized behavior for methods inherited from a superclass.
+- **Flexibility:** Enables dynamic method binding, where the method that gets executed is determined at runtime based on the object's class.
+- **Code Reusability:** Promotes code reuse by allowing subclasses to reuse and extend the functionality of superclass methods.
+
+### Polymorphism with Inheritance
+
+Inheritance allows a class to inherit methods and attributes from another class. Polymorphism is often used with inheritance to allow subclasses to provide specific implementations of methods defined in a superclass.
+
+```python
+class Shape:
+    def area(self):
+        raise NotImplementedError("Subclass must implement abstract method")
+
+class Rectangle(Shape):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius * self.radius
+
+# Function that uses polymorphism with inheritance
+def print_area(shape):
+    print(f"Area: {shape.area()}")
+
+# Usage
+rectangle = Rectangle(5, 10)
+circle = Circle(7)
+
+print_area(rectangle)  # Output: Area: 50
+print_area(circle)     # Output: Area: 153.86
+```
+
+In this example:
+
+- `Shape` is a superclass with an abstract `area` method.
+- `Rectangle` and `Circle` provide specific implementations of the `area` method.
+- The `print_area` function uses polymorphism to handle different `Shape` objects.
+
+### Duck Typing
+
+Python's dynamic nature means that objects are not strictly required to inherit from a common superclass to be used interchangeably. This is known as duck typing: "**If it looks like a duck and quacks like a duck, it's a duck.**"
+
+Duck typing is a programming concept where the type or class of an object is determined by its behavior (methods and properties) rather than its explicit inheritance from a specific class or interface. In other words, if an object implements the required methods and behaviors, it can be treated as an instance of the expected type, regardless of its actual class.
+
+```python
+class Bird:
+    def fly(self):
+        print("Flies high")
+
+class Airplane:
+    def fly(self):
+        print("Soars through the sky")
+
+class Boat:
+    def sail(self):
+        print("Sails on water")
+
+def make_it_fly(flyable):
+    flyable.fly()
+
+# Usage
+bird = Bird()
+plane = Airplane()
+boat = Boat()
+
+make_it_fly(bird)  # Outputs: Flies high
+make_it_fly(plane) # Outputs: Soars through the sky
+
+# The following will raise an error because Boat does not have a fly method
+# make_it_fly(boat)
+```
+
+In this example:
+
+- Both `Bird` and `Airplane` have a `fly` method, so they can be used interchangeably in the `make_it_fly` function.
+- The `Boat` class does not have a `fly` method, so it cannot be used with `make_it_fly`, demonstrating how duck typing depends on method availability rather than class inheritance.
+
+Duck typing is especially useful in scenarios where you work with heterogeneous collections of objects or implement generic functions and algorithms that operate on different types of objects. Here are a few examples:
+
+- **Data Processing:** Functions that process different types of data structures (e.g., lists, sets, dictionaries) can be designed to work with any object that supports the required methods.
+
+- **Frameworks and Libraries:** Many Python frameworks and libraries rely on duck typing to provide flexibility and extensibility. For example, Django and Flask use duck typing for middleware and view functions.
+
+- **Testing and Mocking:** Duck typing is useful in testing where mock objects can be created to simulate real objects, as long as they provide the expected methods.
+
+  
+
+```python
+class EmailNotification:
+    def send(self, message):
+        print(f"Sending email: {message}")
+
+class SMSNotification:
+    def send(self, message):
+        print(f"Sending SMS: {message}")
+
+class PushNotification:
+    def send(self, message):
+        print(f"Sending push notification: {message}")
+
+def notify(notifier, message):
+    notifier.send(message)
+
+# Usage
+email = EmailNotification()
+sms = SMSNotification()
+push = PushNotification()
+
+notify(email, "Hello via Email!")
+notify(sms, "Hello via SMS!")
+notify(push, "Hello via Push Notification!")
+
+```
+
+### Method Overloading and Polymorphism
+
+While Python does not support traditional method overloading (having multiple methods with the same name but different signatures), it does support polymorphism through default arguments and variable-length argument lists.
+
+```python
+class Printer:
+    def print_message(self, message, times=1):
+        for _ in range(times):
+            print(message)
+
+# Usage
+printer = Printer()
+printer.print_message("Hello")          # Output: Hello
+printer.print_message("Hello", 3)       # Output: Hello Hello Hello
+```
+
+In this example:
+
+- The `print_message` method can handle different numbers of arguments, demonstrating polymorphism with default arguments.
+
+### Polymorphism with Operator Overloading
+
+**Operator overloading**, or operator overriding, is a feature in Python that allows developers to define custom behavior for standard operators (like `+`, `-`, `*`, etc.) in user-defined classes. This feature is a form of polymorphism because it allows different objects to respond to the same operator in ways that are specific to their types.
+
+Operator overloading enables you to define how operators behave with instances of your custom classes. This means you can customize the behavior of operators such as `+`, `-`, `*`, `/`, and others for your own objects. By doing this, you make your custom classes more intuitive and easier to use in expressions involving these operators.
+
+**Key Points:**
+
+- **Special Methods:** Python uses special methods, also known as **dunder (double underscore)** methods, to implement operator overloading. For example, `__add__` is used to overload the `+` operator.
+- **Intuitive Syntax:** Overloading operators allows for a more natural and intuitive syntax when working with custom objects, improving code readability and usability.
+- **Consistency:** By providing clear implementations for operators, you can ensure that your objects behave consistently in expressions and operations.
+
+#### Implementing Operator Overloading
+
+To implement operator overloading, you need to define special methods in your class. These methods are named using double underscores before and after the method name (e.g., `__add__`, `__sub__`, `__mul__`). Here’s how you can overload the `+` operator using the `__add__` method:
+
+**Example: Overloading the `+` Operator**
+
+```python
+class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def __add__(self, other):
+        return Vector(self.x + other.x, self.y + other.y)
+    
+    def __repr__(self):
+        return f"Vector({self.x}, {self.y})"
+
+# Usage
+v1 = Vector(1, 2)
+v2 = Vector(3, 4)
+result = v1 + v2
+print(result)  # Outputs: Vector(4, 6)
+```
+
+In this example:
+
+- **`__init__` Method:** Initializes the `Vector` class with `x` and `y` coordinates.
+- **`__add__` Method:** Defines how the `+` operator should work when applied to `Vector` instances. It adds the corresponding components of the vectors.
+- **`__repr__` Method:** Provides a string representation of the `Vector` instance for easier debugging and printing.
+
+#### Other Operators You Can Overload
+
+In addition to `+`, you can overload many other operators by defining their corresponding special methods:
+
+- **Arithmetic Operators:** `__sub__` (for `-`), `__mul__` (for `*`), `__truediv__` (for `/`), etc.
+- **Comparison Operators:** `__eq__` (for `==`), `__ne__` (for `!=`), `__lt__` (for `<`), `__le__` (for `<=`), `__gt__` (for `>`), `__ge__` (for `>=`).
+- **Unary Operators:** `__neg__` (for unary `-`), `__pos__` (for unary `+`), `__abs__` (for `abs()` function).
+- **Other Operators:** `__getitem__` (for indexing `[]`), `__setitem__` (for setting items), `__call__` (for calling instances as functions).
+
+**Example: Overloading Comparison Operators**
+
+```python
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+    
+    def __lt__(self, other):
+        return (self.x**2 + self.y**2) < (other.x**2 + other.y**2)
+    
+    def __repr__(self):
+        return f"Point({self.x}, {self.y})"
+
+# Usage
+p1 = Point(1, 2)
+p2 = Point(1, 2)
+p3 = Point(3, 4)
+
+print(p1 == p2)  # Outputs: True
+print(p1 < p3)   # Outputs: True
+```
+
+In this example:
+
+- **`__eq__` Method:** Defines equality comparison for `Point` objects.
+- **`__lt__` Method:** Defines less-than comparison based on the distance from the origin.
+
+#### Use Cases and Applications
+
+Operator overloading can be particularly useful in several scenarios:
+
+- **Mathematical Objects:** Custom classes representing mathematical entities (like vectors, matrices, complex numbers) can overload arithmetic operators to simplify mathematical operations.
+- **Data Structures:** Classes implementing data structures (like matrices, polynomials) benefit from operator overloading to make them more intuitive to use.
+- **Domain-Specific Languages (DSLs):** Operator overloading can be used to create domain-specific languages or mini-languages where operations are customized for specific types of data.
+
+**Example: Implementing a Matrix Class with Operator Overloading**
+
+```python
+class Matrix:
+    def __init__(self, rows):
+        self.rows = rows
+    
+    def __add__(self, other):
+        return Matrix([[self.rows[i][j] + other.rows[i][j] for j in range(len(self.rows[0]))] for i in range(len(self.rows))])
+    
+    def __repr__(self):
+        return '\n'.join(['\t'.join(map(str, row)) for row in self.rows])
+
+# Usage
+m1 = Matrix([[1, 2], [3, 4]])
+m2 = Matrix([[5, 6], [7, 8]])
+result = m1 + m2
+print(result)
+```
+
+In this example:
+
+- **Matrix Addition:** The `__add__` method allows for matrix addition using the `+` operator, making matrix operations more intuitive.
+
+### Abstract Base Classes and Polymorphism
+
+Abstract Base Classes (ABCs) provide a formal way to define and enforce interfaces, which can be used to achieve polymorphism.
+
+```python
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def make_sound(self):
+        pass
+
+class Dog(Animal):
+    def make_sound(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def make_sound(self):
+        return "Meow!"
+
+def animal_sound(animal):
+    print(animal.make_sound())
+
+# Usage
+animals = [Dog(), Cat()]
+
+for animal in animals:
+    animal.make_sound()
+    
+# Output: Woof!
+# Output: Meow!
+```
+
+In this example:
+
+- `Animal` is an abstract base class with an abstract method `make_sound`.
+- `Dog` and `Cat` implement the `make_sound` method.
+- This setup allows the `animal_sound` function to operate on any `Animal`, demonstrating polymorphism with ABCs.
+
+Polymorphism in Python allows methods and functions to operate on objects of different types in a uniform way. It can be achieved through inheritance, duck typing, method overloading, operator overloading, and abstract base classes. This tutorial has covered the basics of polymorphism, provided examples of its application, and explored advanced topics such as operator overloading and abstract base classes. By understanding and utilizing polymorphism, you can write more flexible and reusable code, making your programs easier to maintain and extend.
+
+
+
+## Encapsulation vs Inheritance vs Abstraction vs Polymorphism
+
+
+
+| **Concept**       | **Definition**                                               | **Purpose**                                                  | **Key Features**                                             | **Use Cases**                                                |
+| ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Encapsulation** | Bundling data and methods that operate on the data into a single unit (class) and restricting access to some of the object's components. | To protect the internal state of an object from unintended or harmful changes and to provide a controlled interface. | - Access modifiers (public, protected, private) <br> - Property decorators <br> - Getter and setter methods | - Data hiding <br> - Restricting direct access <br> - Implementing controlled interfaces |
+| **Inheritance**   | Mechanism by which one class (child) inherits attributes and methods from another class (parent). | To promote code reusability and establish a hierarchical relationship between classes. | - Single, multiple, and multi-level inheritance <br> - Method overriding <br> - `super()` usage | - Extending functionality <br> - Creating hierarchical models <br> - Code reuse |
+| **Abstraction**   | Hiding the complex implementation details and showing only the essential features of the object. | To simplify interaction with complex systems and to provide a clear and focused interface. | - Abstract classes <br> - Abstract methods <br> - Concrete subclasses implementing abstract methods | - Simplifying complex systems <br> - Defining clear interfaces <br> - Modular design |
+| **Polymorphism**  | The ability of different objects to be treated as instances of the same class through a common interface. | To allow objects of different classes to be treated through a common interface, enhancing flexibility. | - Method overriding <br> - Method overloading <br> - Duck typing <br> - Operator overloading | - Implementing common interfaces <br> - Dynamic method invocation <br> - Enhancing flexibility in code |
+
+
+
+- **Encapsulation** focuses on bundling data with methods and restricting access to the internals of an object. It ensures that the internal state of an object is protected and provides controlled access through public methods. Encapsulation helps in maintaining and modifying the internal structure of a class without affecting the outside code.
+
+- **Inheritance** allows one class to inherit attributes and methods from another class. This promotes code reuse and establishes a parent-child relationship between classes. Inheritance can be single, multiple, or multi-level, and it helps in extending functionality and creating hierarchical models.
+
+- **Abstraction** hides the complex implementation details and exposes only the essential features of an object. It is achieved through abstract classes and methods. Abstraction simplifies interactions with complex systems by defining clear and focused interfaces, making it easier to work with and manage complex systems.
+
+- **Polymorphism** enables objects of different classes to be treated as instances of the same class through a common interface. This includes method overriding, method overloading, and operator overloading. Polymorphism enhances code flexibility and allows dynamic method invocation based on the object's actual type at runtime.
+
+## Example: Put all togather:
+
+Below is a simple data pipeline project that demonstrates the core Object-Oriented Programming (OOP) concepts: **Encapsulation, Inheritance, Abstraction, and Polymorphism.** The project involves a basic data processing pipeline where data is read, processed, and written.
+
+**Objective:** Create a data pipeline that reads data from a source, processes it, and writes the processed data to a destination. Use OOP principles to structure the code.
+
+#### 1. Abstraction
+
+We will use abstract classes to define the common interface for different types of data sources and data processors.
+
+```python
+from abc import ABC, abstractmethod
+
+# Abstract base class for data sources
+class DataSource(ABC):
+    @abstractmethod
+    def read(self):
+        pass
+
+# Abstract base class for data processors
+class DataProcessor(ABC):
+    @abstractmethod
+    def process(self, data):
+        pass
+
+# Abstract base class for data destinations
+class DataDestination(ABC):
+    @abstractmethod
+    def write(self, data):
+        pass
+```
+
+#### 2. Encapsulation
+
+Encapsulation is demonstrated by defining how the data is managed within each class. We'll create concrete implementations of the abstract classes that encapsulate the data handling logic.
+
+```python
+# Concrete class for reading from a file
+class FileDataSource(DataSource):
+    def __init__(self, filename):
+        self.filename = filename
+
+    def read(self):
+        with open(self.filename, 'r') as file:
+            return file.readlines()
+
+# Concrete class for processing data by converting it to uppercase
+class UpperCaseProcessor(DataProcessor):
+    def process(self, data):
+        return [line.upper() for line in data]
+
+# Concrete class for writing data to a file
+class FileDataDestination(DataDestination):
+    def __init__(self, filename):
+        self.filename = filename
+
+    def write(self, data):
+        with open(self.filename, 'w') as file:
+            file.writelines(data)
+```
+
+#### 3. Inheritance
+
+Inheritance is used to create specialized versions of the abstract base classes. The concrete classes inherit from the abstract base classes and provide implementations for the abstract methods.
+
+```python
+# Inheriting from DataSource to implement file reading
+class FileDataSource(DataSource):
+    ...
+
+# Inheriting from DataProcessor to implement data processing
+class UpperCaseProcessor(DataProcessor):
+    ...
+
+# Inheriting from DataDestination to implement file writing
+class FileDataDestination(DataDestination):
+    ...
+```
+
+#### 4. Polymorphism
+
+Polymorphism is demonstrated when different concrete implementations of the abstract classes are used interchangeably in the data pipeline.
+
+```python
+def run_pipeline(data_source: DataSource, processor: DataProcessor, destination: DataDestination):
+    # Read data from the source
+    data = data_source.read()
+    
+    # Process the data
+    processed_data = processor.process(data)
+    
+    # Write the processed data to the destination
+    destination.write(processed_data)
+
+# Usage
+if __name__ == "__main__":
+    source = FileDataSource('input.txt')
+    processor = UpperCaseProcessor()
+    destination = FileDataDestination('output.txt')
+    
+    run_pipeline(source, processor, destination)
+```
+
+
+
+1. **Abstraction:** Defined the common interface for data sources, processors, and destinations using abstract base classes.
+2. **Encapsulation:** Implemented specific behaviors for reading, processing, and writing data within concrete classes.
+3. **Inheritance:** Used inheritance to extend abstract base classes and provide concrete implementations.
+4. **Polymorphism:** Utilized polymorphism by defining a `run_pipeline` function that operates on any concrete implementations of the abstract classes.
+
+This project showcases how to use core OOP concepts to structure and manage a simple data processing pipeline efficiently.
+
+
+
+**The complete code** for the classes that inherit from `DataSource`, `DataProcessor`, and `DataDestination` to implement file reading, data processing, and file writing:
+
+```python
+from abc import ABC, abstractmethod
+
+# Abstract base class for data sources
+class DataSource(ABC):
+    @abstractmethod
+    def read(self):
+        pass
+
+# Abstract base class for data processors
+class DataProcessor(ABC):
+    @abstractmethod
+    def process(self, data):
+        pass
+
+# Abstract base class for data destinations
+class DataDestination(ABC):
+    @abstractmethod
+    def write(self, data):
+        pass
+
+# Inheriting from DataSource to implement file reading
+class FileDataSource(DataSource):
+    def __init__(self, filename):
+        self.filename = filename
+
+    def read(self):
+        with open(self.filename, 'r') as file:
+            return file.readlines()
+
+# Inheriting from DataProcessor to implement data processing
+class UpperCaseProcessor(DataProcessor):
+    def process(self, data):
+        return [line.upper() for line in data]
+
+# Inheriting from DataDestination to implement file writing
+class FileDataDestination(DataDestination):
+    def __init__(self, filename):
+        self.filename = filename
+
+    def write(self, data):
+        with open(self.filename, 'w') as file:
+            file.writelines(data)
+
+# Function to run the pipeline
+def run_pipeline(data_source: DataSource, processor: DataProcessor, destination: DataDestination):
+    # Read data from the source
+    data = data_source.read()
+    
+    # Process the data
+    processed_data = processor.process(data)
+    
+    # Write the processed data to the destination
+    destination.write(processed_data)
+
+# Usage
+if __name__ == "__main__":
+    source = FileDataSource('input.txt')
+    processor = UpperCaseProcessor()
+    destination = FileDataDestination('output.txt')
+    
+    run_pipeline(source, processor, destination)
+```
+
+### Explanation:
+
+1. **`FileDataSource`**:
+   - Inherits from `DataSource`.
+   - Implements the `read` method to read lines from a specified file.
+
+2. **`UpperCaseProcessor`**:
+   - Inherits from `DataProcessor`.
+   - Implements the `process` method to convert each line of data to uppercase.
+
+3. **`FileDataDestination`**:
+   - Inherits from `DataDestination`.
+   - Implements the `write` method to write lines of data to a specified file.
+
+4. **`run_pipeline` function**:
+   - Demonstrates polymorphism by accepting instances of any class that inherits from the abstract base classes.
+   - Reads data from a source, processes it, and writes the processed data to a destination.
+
+5. **Usage**:
+   - Creates instances of `FileDataSource`, `UpperCaseProcessor`, and `FileDataDestination`.
+   - Runs the pipeline to process data from 'input.txt' and save it to 'output.txt'.
+
+This code showcases how OOP principles such as abstraction, encapsulation, inheritance, and polymorphism are used in a real-world data pipeline scenario.
+
+----
+
+
+
+## Overview of Dunder Methods
+
+Dunder methods, also known as magic methods or special methods, are a set of predefined methods in Python that allow you to define the behavior of your objects in built-in operations. They are named with double underscores before and after their names (e.g., `__init__`, `__str__`, `__add__`).
+
+1. **`__init__`**: 
+   - **Purpose**: Called when an instance of the class is created.
+   - **Usage**: Initialize instance attributes.
+   - **Example**: 
+     ```python
+     class Person:
+         def __init__(self, name, age):
+             self.name = name
+             self.age = age
+     ```
+
+2. **`__str__`**:
+   - **Purpose**: Defines the string representation of the object, used by `print()` and `str()`.
+   - **Usage**: Provide a user-friendly string representation.
+   - **Example**:
+     ```python
+     class Person:
+         def __str__(self):
+             return f"{self.name}, Age: {self.age}"
+     ```
+
+3. **`__repr__`**:
+   - **Purpose**: Defines the string representation for debugging, used by `repr()`.
+   - **Usage**: Provide an unambiguous string representation of the object.
+   - **Example**:
+     ```python
+     class Person:
+         def __repr__(self):
+             return f"Person(name={self.name!r}, age={self.age!r})"
+     ```
+
+4. **`__len__`**:
+   - **Purpose**: Defines behavior for the `len()` function.
+   - **Usage**: Return the length of the object.
+   - **Example**:
+     ```python
+     class MyCollection:
+         def __init__(self, items):
+             self.items = items
+         
+         def __len__(self):
+             return len(self.items)
+     ```
+
+5. **`__getitem__`**, **`__setitem__`**, **`__delitem__`**:
+   
+   - **Purpose**: Define behavior for indexing, setting, and deleting items in collections.
+   - **Usage**: Access, modify, or delete elements using indexing syntax.
+   - **Example**:
+     ```python
+     class MyList:
+         def __init__(self):
+             self._list = []
+         
+         def __getitem__(self, index):
+             return self._list[index]
+         
+         def __setitem__(self, index, value):
+             self._list[index] = value
+         
+         def __delitem__(self, index):
+             del self._list[index]
+     ```
+   
+6. **`__add__`, **`__sub__`**, **`__mul__`:
+   
+   - **Purpose**: Define behavior for arithmetic operations.
+   - **Usage**: Implement custom behavior for addition, subtraction, multiplication, etc.
+   - **Example**:
+     
+     ```python
+     class Vector:
+         def __init__(self, x, y):
+             self.x = x
+             self.y = y
+         
+         def __add__(self, other):
+             return Vector(self.x + other.x, self.y + other.y)
+         
+         def __repr__(self):
+             return f"Vector(x={self.x}, y={self.y})"
+     ```
+   
+7. **`__eq__`, **`__lt__`**, **`__gt__`:
+   
+   - **Purpose**: Define behavior for comparison operations.
+   - **Usage**: Implement custom comparison logic.
+   - **Example**:
+     ```python
+     class Person:
+         def __init__(self, name, age):
+             self.name = name
+             self.age = age
+         
+         def __eq__(self, other):
+             return self.age == other.age
+         
+         def __lt__(self, other):
+             return self.age < other.age
+     ```
+   
+8. **`__call__`**:
+   
+   - **Purpose**: Allows an instance of a class to be called as a function.
+   - **Usage**: Implement callable objects.
+   - **Example**:
+     ```python
+     class Adder:
+         def __init__(self, value):
+             self.value = value
+         
+         def __call__(self, x):
+             return self.value + x
+     ```
+   
+9. **`__enter__`**, **`__exit__`**:
+   
+   - **Purpose**: Define behavior for context managers (used with `with` statement).
+   - **Usage**: Manage resources, like files.
+   - **Example**:
+     ```python
+     class FileOpener:
+         def __init__(self, filename):
+             self.filename = filename
+         
+         def __enter__(self):
+             self.file = open(self.filename, 'r')
+             return self.file
+         
+         def __exit__(self, exc_type, exc_val, exc_tb):
+             self.file.close()
+     ```
+
+### Applications and Use Cases
+
+- **Custom Data Structures**: Implement indexing, length, and item management in custom collections.
+- **Operator Overloading**: Define how custom objects respond to arithmetic and comparison operators.
+- **Context Management**: Manage resources using context managers to ensure proper resource handling and cleanup.
+- **Callable Objects**: Create objects that can be used as functions, useful for creating flexible and reusable code.
+
+Dunder methods allow you to make your classes interact seamlessly with Python's built-in functions and operations, providing a powerful way to extend and customize behavior in your applications.
