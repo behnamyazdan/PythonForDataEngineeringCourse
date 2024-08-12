@@ -469,7 +469,7 @@ In this project, we aim to implement an ETL (Extract, Transform, Load) process f
 
 **Objective:** Build an ETL pipeline to manage and analyze data from an e-commerce platform. The data includes sales transactions, customer interactions, and inventory information. This pipeline will help in generating aggregated insights and reports for business intelligence.
 
-![](/lab/learning_projects/PythonForDataEngineering/_assets/etl_project_overview.webp)
+![](../_assets/etl_project_overview.webp)
 
 **Data Sources:**
 
