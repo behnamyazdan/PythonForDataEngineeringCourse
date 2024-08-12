@@ -915,7 +915,3 @@ By integrating logging into each phase of the ETL pipeline—extraction, transfo
 ### Summary
 
 This ETL process extracts data from a PostgreSQL database, transforms it to ensure quality and consistency, and loads it into a MySQL data warehouse. The entire process is managed with Python and SQL, and Docker Compose is used to deploy and manage the database services.
-
----
-
-Let me know if you need any further details or adjustments!
