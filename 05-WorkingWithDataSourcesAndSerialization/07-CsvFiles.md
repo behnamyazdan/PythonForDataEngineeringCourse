@@ -489,7 +489,7 @@ Implement comprehensive error handling to log and manage exceptions, providing m
 ```python
 import logging
 
-logging.basicConfig(filename='data_processing.log', level=logging.ERROR)
+logging.basicConfig(filename='data_processing.logs', level=logging.ERROR)
 
 def process_csv(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:

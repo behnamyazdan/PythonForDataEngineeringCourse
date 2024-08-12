@@ -87,7 +87,7 @@ Finally, let's view the commit history to see the changes we've made.
 1. **Viewing Commit History**:
    - Use the `git log` command to see a log of all the commits made to the repository.
      ```sh
-     git log
+     git logs
      ```
    - This command shows a list of commits, including their commit hashes, author information, date, and commit messages. This history is crucial for tracking the development of your project over time.
 

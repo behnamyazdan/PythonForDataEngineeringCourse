@@ -222,7 +222,7 @@ Dictionaries are versatile data structures in Python, offering efficient lookup 
    # Storing application configuration settings
    config = {
        "database": {"host": "localhost", "port": 3306, "username": "admin", "password": "password"},
-       "logging": {"level": "DEBUG", "file": "app.log"}
+       "logging": {"level": "DEBUG", "file": "app.logs"}
    }
    
    # Accessing database connection details

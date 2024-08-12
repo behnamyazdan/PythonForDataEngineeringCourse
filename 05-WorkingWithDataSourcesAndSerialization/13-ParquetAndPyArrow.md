@@ -2503,8 +2503,8 @@ import csv
 import random
 import datetime
 
-# Configuration for the log file
-num_records = 10000  # Number of log records to generate
+# Configuration for the logs file
+num_records = 10000  # Number of logs records to generate
 start_date = datetime.datetime(2024, 1, 1)  # Start date for the logs
 end_date = datetime.datetime(2024, 1, 10)  # End date for the logs
 
@@ -2521,14 +2521,14 @@ def generate_random_timestamp(start, end):
         seconds=random.randint(0, int((end - start).total_seconds()))
     )
 
-# Function to generate a single log record
+# Function to generate a single logs record
 def generate_log_record():
     timestamp = generate_random_timestamp(start_date, end_date).strftime("%Y-%m-%d %H:%M:%S")
     user_id = random.choice(user_ids)
     page_url = random.choice(page_urls)
     return [timestamp, user_id, page_url]
 
-# Generate the log file
+# Generate the logs file
 with open("large_log_file.csv", "w", newline="") as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(["timestamp", "user_id", "page_url"])  # Write header
@@ -2545,14 +2545,14 @@ import pyarrow as pa
 import pandas as pd
 import pyarrow.csv as csv
 
-# Define the schema for the log file
+# Define the schema for the logs file
 schema = pa.schema([
     ('timestamp', pa.timestamp('ms')),
     ('user_id', pa.string()),
     ('page_url', pa.string())
 ])
 
-# Function to read log file in batches
+# Function to read logs file in batches
 def read_log_file_in_batches(file_path, batch_size):
     read_options = csv.ReadOptions(block_size=batch_size)
     convert_options = csv.ConvertOptions(column_types=schema)

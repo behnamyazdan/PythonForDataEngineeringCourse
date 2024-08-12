@@ -282,7 +282,7 @@ Effective error handling involves not only using the right techniques but also f
   ```python
   import logging
   
-  logging.basicConfig(filename='app.log', level=logging.ERROR)
+  logging.basicConfig(filename='app.logs', level=logging.ERROR)
   
   try:
       result = 10 / 0
