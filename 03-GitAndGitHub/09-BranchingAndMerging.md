@@ -165,7 +165,7 @@ This hands-on exercise will demonstrate how to isolate changes in a dedicated br
 6. **Stage and Commit Your Changes**:
    - Stage the changes you’ve made using the `git add` command:
      ```sh
-     git add data_transformation.py
+     git add data_transform.py
      ```
    - Commit the changes with a descriptive message:
      ```sh

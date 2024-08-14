@@ -1,0 +1,44 @@
+name: iot_pipeline
+
+services:
+  postgres:
+    image: postgres:13-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: iot_data
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # ClickHouse service
+  clickhouse-server:
+    image: clickhouse/clickhouse-server:latest
+    container_name: clickhouse-server
+    ports:
+      - "8123:8123"  # HTTP port
+      - "9000:9000"  # Native client port
+    volumes:
+      - clickhouse-data:/var/lib/clickhouse
+      - clickhouse-config:/etc/clickhouse-server
+    environment:
+      - CLICKHOUSE_DB=mydatabase
+
+  # Optional: Grafana for dashboarding
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - clickhouse-server
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin  # Default admin password for Grafana
+      - GF_INSTALL_PLUGINS=grafana-clickhouse-datasource
+
+volumes:
+  clickhouse-data:
+  clickhouse-config:
+  postgres_data:
