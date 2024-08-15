@@ -13,7 +13,7 @@ For our project, we will focus on a data pipeline for an IoT (Internet of Things
 1. **Data Sources:** We will simulate data from various IoT sensors, such as temperature, humidity, and motion sensors. The data will be generated in real-time and stored in a database.
 2. **Data Ingestion:** Develop Python scripts to extract data from simulated IoT devices and store it in a staging area.
 3. **Data Transformation:** Implement transformation logic to clean, enrich, and aggregate the data. This might include converting raw sensor data into meaningful metrics, handling missing values, and aggregating data over time.
-4. **Data Loading:** Load the transformed data into a data warehouse (e.g., MySQL) for further analysis and visualization.
+4. **Data Loading:** Load the transformed data into a data warehouse for further analysis and visualization.
 5. **End-to-End Pipeline:** Integrate the ingestion, transformation, and loading components into a cohesive pipeline.
 6. **Monitoring and Logging:** Implement error handling and logging to monitor the pipeline's performance and troubleshoot any issues.
 
@@ -24,9 +24,9 @@ For our project, we will focus on a data pipeline for an IoT (Internet of Things
 In this hands-on lab, you will:
 
 1. **Set Up Your Environment:** Ensure you have all necessary tools and libraries installed, such as Python, Pandas, and SQLAlchemy.
-2. **Data Ingestion:** Write Python scripts to simulate IoT data generation and store it in a staging area. Use libraries like `requests` for API interactions if needed.
+2. **Data Ingestion:** Write Python scripts to simulate IoT data generation and store it in a staging area.
 3. **Data Transformation:** Create transformation scripts using Pandas to clean and process the data. For instance, you might filter out outlier readings, handle missing values, and compute aggregate metrics like average temperature.
-4. **Data Loading:** Develop scripts to load the transformed data into the MySQL data warehouse. Use SQLAlchemy or similar libraries to manage database connections and execute SQL queries.
+4. **Data Loading:** Develop scripts to load the transformed data into the ClickHouse data warehouse. 
 
 ## Review and Feedback
 
@@ -57,13 +57,12 @@ This project will provide you with hands-on experience in designing, implementin
    - Install the following Python libraries:
      - `pandas` for data manipulation
      - `sqlalchemy` for database interaction
-     - `requests` if you need to interact with APIs
-     - `mysql-connector-python` for MySQL connectivity
+     - `clickhouse_connect` for ClickHouse connectivity
      - `pytest` for testing (optional)
    
    You can install these libraries using `pip`:
    ```bash
-   pip install pandas sqlalchemy requests clickhouse_connect pytest schedule
+   pip install pandas sqlalchemy clickhouse_connect pytest schedule
    ```
    
 2. **Set Up a Virtual Environment:**
@@ -143,7 +142,7 @@ This project will provide you with hands-on experience in designing, implementin
      ```
    
 3. **Set Up Docker for Databases:**
-   - Create a `docker-compose.yml` file to set up PostgreSQL and MySQL containers.
+   - Create a `docker-compose.yml` file to set up PostgreSQL and ClickHouse, and Grafana containers.
    - Example `docker-compose.yml` file:
      ```yaml
      name: iot_pipeline
@@ -157,7 +156,7 @@ This project will provide you with hands-on experience in designing, implementin
            POSTGRES_PASSWORD: postgres
            POSTGRES_DB: iot_data
          ports:
-           - "5433:5432"
+           - "5432:5432"
          volumes:
            - postgres_data:/var/lib/postgresql/data
      
